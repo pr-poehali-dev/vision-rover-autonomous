@@ -81,8 +81,8 @@ const ScrollCards = () => {
                   index === currentCard
                     ? "opacity-100 translate-y-0 scale-100 rotate-0"
                     : index < currentCard
-                      ? "opacity-0 -translate-y-6 scale-98 -rotate-2"
-                      : "opacity-0 translate-y-6 scale-98 rotate-2"
+                      ? "opacity-70 -translate-y-3 scale-95 -rotate-1"
+                      : "opacity-70 translate-y-3 scale-95 rotate-1"
                 }`}
                 style={{
                   zIndex:
