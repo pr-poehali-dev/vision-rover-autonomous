@@ -106,10 +106,25 @@ const ScrollCards = () => {
                 }}
               >
                 <div
-                  className={`${card.color} rounded-3xl p-8 md:p-12 text-white shadow-2xl h-full flex flex-col justify-center relative overflow-hidden`}
+                  className={`${index === 0 ? "relative" : card.color} rounded-3xl p-8 md:p-12 text-white shadow-2xl h-full flex flex-col justify-center relative overflow-hidden`}
+                  style={
+                    index === 0
+                      ? {
+                          backgroundImage: `url('https://cdn.poehali.dev/files/798b1710-752f-48f7-8b7b-366a0c6f7c4d.png')`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                          backgroundRepeat: "no-repeat",
+                        }
+                      : {}
+                  }
                 >
+                  {/* Overlay for text readability on first card */}
+                  {index === 0 && (
+                    <div className="absolute inset-0 bg-black/20 rounded-3xl" />
+                  )}
+
                   {/* Top badge */}
-                  <div className="absolute top-6 right-6">
+                  <div className="absolute top-6 right-6 z-10">
                     <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
                       {card.subtitle}
                     </span>
