@@ -55,30 +55,26 @@ const TechStack = () => {
         </div>
 
         {/* Technologies Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid gap-6">
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl border border-gray-100 hover:border-cosmic-blue/20 transition-all duration-500 hover:-translate-y-2"
+              className="group bg-white rounded-2xl p-6 shadow-md hover:shadow-xl border border-gray-100 hover:border-cosmic-blue/20 transition-all duration-500 hover:-translate-y-1 relative overflow-hidden"
             >
-              <div
-                className={`w-16 h-16 mx-auto mb-6 ${tech.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
-              >
-                <Icon name={tech.icon} size={28} className="text-white" />
-              </div>
+              <div className="flex items-start justify-between">
+                <div className="flex-1 pr-6">
+                  <h3 className="text-xl font-bold text-cosmic-blue mb-3">
+                    {tech.name}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    {tech.description}
+                  </p>
+                </div>
 
-              <h3 className="text-xl font-bold text-cosmic-blue mb-3 text-center">
-                {tech.name}
-              </h3>
-
-              <p className="text-gray-600 text-center leading-relaxed">
-                {tech.description}
-              </p>
-
-              <div className="mt-6 pt-4 border-t border-gray-100">
-                <div className="flex items-center justify-center text-cosmic-blue/70 group-hover:text-cosmic-blue transition-colors">
-                  <Icon name="ArrowRight" size={16} className="mr-2" />
-                  <span className="text-sm font-medium">Подробнее</span>
+                <div
+                  className={`w-14 h-14 ${tech.color} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}
+                >
+                  <Icon name={tech.icon} size={24} className="text-white" />
                 </div>
               </div>
             </div>
