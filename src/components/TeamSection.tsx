@@ -211,32 +211,8 @@ const TeamSection = () => {
           ))}
         </div>
 
-        {/* Управление автопрокруткой */}
-        <div className="flex justify-center mt-6">
-          <button
-            onClick={() => setIsAutoPlay(!isAutoPlay)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full transition-colors ${
-              isAutoPlay
-                ? "bg-cosmic-blue text-white"
-                : "bg-gray-200 text-gray-600 hover:bg-gray-300"
-            }`}
-          >
-            <Icon name={isAutoPlay ? "Pause" : "Play"} size={16} />
-            <span className="text-sm">
-              {isAutoPlay ? "Остановить" : "Автопрокрутка"}
-            </span>
-          </button>
-        </div>
-
-        {/* Подсказка */}
-        <div className="text-center mt-6">
-          <p className="text-gray-600 text-sm">
-            Нажмите на карточку разработчика, чтобы узнать больше о его опыте и
-            достижениях
-          </p>
-        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
