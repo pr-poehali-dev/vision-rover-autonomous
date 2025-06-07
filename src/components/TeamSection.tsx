@@ -194,7 +194,7 @@ const TeamSection = () => {
 
         {/* Индикаторы слайдов */}
         <div className="flex justify-center space-x-2 mb-4">
-          {teamMembers.map((_, index) => (
+          {team.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
