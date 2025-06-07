@@ -86,10 +86,11 @@ const TeamSection = () => {
           </p>
         </div>
 
-        <div className="relative">
+        <div className="relative -mx-4">
           <div
-            className="flex gap-4 pb-6"
+            className="flex gap-4 pb-6 px-4"
             style={{
+              width: `${team.length * 336}px`, // 320px card + 16px gap
               overflowX: "auto",
               overflowY: "hidden",
               scrollBehavior: "smooth",
