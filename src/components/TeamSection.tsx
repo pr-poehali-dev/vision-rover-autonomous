@@ -88,15 +88,14 @@ const TeamSection = () => {
 
         <div className="relative">
           <div
-            className="flex overflow-x-auto pb-6 scrollbar-hide snap-x snap-mandatory gap-4"
+            className="flex overflow-x-auto pb-6 gap-4"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
-              minWidth: "100%",
+              WebkitOverflowScrolling: "touch",
             }}
           >
-            <div className="flex gap-4" style={{ minWidth: "max-content" }}>
-              {team.map((member, index) => (
+            {team.map((member, index) => (
                 <div
                   key={index}
                   className={`relative flex-shrink-0 w-80 h-96 bg-gradient-to-br ${member.gradient} cursor-pointer transition-all duration-300 hover:scale-105 snap-center rounded-2xl ${
@@ -151,6 +150,9 @@ const TeamSection = () => {
 
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        div[style*="WebkitOverflowScrolling"]::-webkit-scrollbar {
           display: none;
         }
       `}</style>
