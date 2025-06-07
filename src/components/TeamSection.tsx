@@ -206,7 +206,7 @@ const TeamSection = () => {
         </div>
 
         {/* Подсказка о кликабельности карточек */}
-        <p className="text-center text-white/70 text-sm">
+        <p className="text-center text-sm text-[#012F2C]">
           💡 Нажмите на карточку, чтобы увидеть цитату
         </p>
       </div>
