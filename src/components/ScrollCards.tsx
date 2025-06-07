@@ -119,7 +119,7 @@ const ScrollCards = () => {
                 >
                   {/* Overlay removed since we're using solid colors */}
                   {(index === 0 || index === 1 || index === 2) && (
-                    <div className="absolute inset-0 bg-black/20 rounded-3xl" />
+                    <div className="absolute inset-0 rounded-3xl bg-[#00000000]" />
                   )}
 
                   {/* Top badge */}
