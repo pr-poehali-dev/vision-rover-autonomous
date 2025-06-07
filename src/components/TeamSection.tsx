@@ -98,10 +98,6 @@ const TeamSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-16 text-left text-[#012F2C]">
           Разработчики
         </h2>
-        {/* Заголовок */}
-        <div className="text-center mb-16">
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto"></p>
-        </div>
 
         {/* Карусель команды */}
         <div className="relative">
@@ -210,9 +206,8 @@ const TeamSection = () => {
             />
           ))}
         </div>
-
       </div>
-    </div>
+    </section>
   );
 };
 
