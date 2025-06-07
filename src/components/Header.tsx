@@ -37,9 +37,7 @@ const Header = () => {
             <a
               href="#contact"
               className="text-gray-700 hover:text-[#012F2C] transition-colors"
-            >
-              Контакты
-            </a>
+            ></a>
           </nav>
 
           {/* CTA кнопка */}
