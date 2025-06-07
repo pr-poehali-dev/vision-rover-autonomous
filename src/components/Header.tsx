@@ -11,7 +11,7 @@ const Header = () => {
             <div className="w-8 h-8 bg-[#78CBB4] rounded-lg flex items-center justify-center">
               <Icon name="Bot" size={20} className="text-white" />
             </div>
-            <span className="text-xl font-bold text-[#195f5a]">
+            <span className="text-xl font-bold text-[#012F2C]">
               Vision Rover
             </span>
           </div>
@@ -20,19 +20,19 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <a
               href="#about"
-              className="hover:text-[#012F2C] transition-colors text-[#195f5a]"
+              className="text-gray-700 hover:text-[#012F2C] transition-colors"
             >
               Принципы работы
             </a>
             <a
               href="#tech"
-              className="hover:text-[#012F2C] transition-colors text-[#195f5a]"
+              className="text-gray-700 hover:text-[#012F2C] transition-colors"
             >
               Стек
             </a>
             <a
               href="#team"
-              className="hover:text-[#012F2C] transition-colors text-[#195f5a]"
+              className="text-gray-700 hover:text-[#012F2C] transition-colors"
             >
               Разработчики
             </a>
