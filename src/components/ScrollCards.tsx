@@ -68,7 +68,7 @@ const ScrollCards = () => {
     <section className="py-20 px-4 bg-gray-50 min-h-screen flex items-center">
       <div className="max-w-6xl mx-auto w-full">
         <h2 className="text-3xl md:text-4xl font-bold text-cosmic-blue text-left mb-16">
-          Принцип работы
+          Принципы работы
         </h2>
 
         <div className="relative">
