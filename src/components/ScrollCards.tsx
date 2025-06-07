@@ -42,7 +42,7 @@ const ScrollCards = () => {
           const currentScrollY = window.scrollY;
           const direction = currentScrollY > lastScrollY ? "down" : "up";
 
-          if (Math.abs(currentScrollY - lastScrollY) > 50) {
+          if (Math.abs(currentScrollY - lastScrollY) > 30) {
             setScrollDirection(direction);
 
             if (direction === "down" && currentCard < cards.length - 1) {
@@ -77,12 +77,12 @@ const ScrollCards = () => {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className={`absolute inset-0 transition-all duration-700 ease-out transform ${
+                className={`absolute inset-0 transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] transform ${
                   index === currentCard
                     ? "opacity-100 translate-y-0 scale-100 rotate-0"
                     : index < currentCard
-                      ? "opacity-0 -translate-y-8 scale-95 -rotate-3"
-                      : "opacity-0 translate-y-8 scale-95 rotate-3"
+                      ? "opacity-0 -translate-y-6 scale-98 -rotate-2"
+                      : "opacity-0 translate-y-6 scale-98 rotate-2"
                 }`}
                 style={{
                   zIndex:
@@ -124,7 +124,7 @@ const ScrollCards = () => {
             {cards.map((_, index) => (
               <div
                 key={index}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-500 ${
                   index === currentCard ? "bg-orange-500" : "bg-gray-300"
                 }`}
               />
