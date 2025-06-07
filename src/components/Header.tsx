@@ -48,9 +48,7 @@ const Header = () => {
           </Button>
 
           {/* Мобильное меню */}
-          <button className="md:hidden">
-            <Icon name="Menu" size={24} className="text-[#012F2C]" />
-          </button>
+          <button className="md:hidden"></button>
         </div>
       </div>
     </header>
