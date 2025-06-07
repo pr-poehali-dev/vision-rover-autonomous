@@ -3,14 +3,22 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <section className="min-h-[50vh] bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 flex items-center justify-center px-4 py-8">
-      <div className="max-w-4xl mx-auto text-left">
-        <h1 className="sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight px-[7px] py-1 my-0 text-5xl text-left">
-          Vision Rover: Автономный разведчик для экстремальных сред
-        </h1>
-        <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto"></p>
-        <Button className="bg-green-500 text-white hover:bg-green-600 hover:shadow-green-500/30 hover:shadow-2xl transition-all duration-300 text-lg px-8 py-4 rounded-full font-semibold">
-          Explore Tools
-        </Button>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="text-left">
+          <h1 className="sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-6">
+            Vision Rover: Автономный разведчик для экстремальных сред
+          </h1>
+          <Button className="bg-green-500 text-white hover:bg-green-600 hover:shadow-green-500/30 hover:shadow-2xl transition-all duration-300 text-lg px-8 py-4 rounded-full font-semibold">
+            Explore Tools
+          </Button>
+        </div>
+        <div className="flex justify-center lg:justify-end">
+          <img
+            src="https://cdn.poehali.dev/files/8bfe3c1b-ebf7-49fc-81c9-c8501760f369.png"
+            alt="AI робот с символом искусственного интеллекта"
+            className="max-w-full h-auto max-h-96 object-contain"
+          />
+        </div>
       </div>
     </section>
   );
