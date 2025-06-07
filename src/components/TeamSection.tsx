@@ -193,19 +193,22 @@ const TeamSection = () => {
         </div>
 
         {/* Индикаторы слайдов */}
-        <div className="flex justify-center mt-8 gap-2">
-          {Array.from({ length: maxSlide + 1 }).map((_, index) => (
+        <div className="flex justify-center space-x-2 mb-4">
+          {teamMembers.map((_, index) => (
             <button
               key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                currentSlide === index
-                  ? "bg-[#012F2C] scale-125"
-                  : "bg-gray-300 hover:bg-gray-400"
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                currentSlide === index ? "bg-white" : "bg-white/50"
               }`}
             />
           ))}
         </div>
+
+        {/* Подсказка о кликабельности карточек */}
+        <p className="text-center text-white/70 text-sm">
+          💡 Нажмите на карточку, чтобы увидеть цитату
+        </p>
       </div>
     </section>
   );
