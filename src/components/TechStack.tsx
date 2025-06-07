@@ -57,7 +57,7 @@ const TechStack = () => {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className={`group relative ${tech.color} rounded-2xl p-8 shadow-lg hover:shadow-xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-1`}
+              className={`group relative ${tech.color} rounded-2xl p-8 shadow-lg hover:shadow-xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-1 bg-opacity-90`}
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1 pr-8">
