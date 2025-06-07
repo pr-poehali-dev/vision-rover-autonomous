@@ -78,13 +78,6 @@ const TechStack = () => {
         </div>
 
         {/* Additional Info - removed empty content */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center px-6 py-3 bg-cosmic-blue/5 rounded-full">
-            <span className="text-cosmic-blue font-medium">
-              Все компоненты прошли космические испытания
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );
