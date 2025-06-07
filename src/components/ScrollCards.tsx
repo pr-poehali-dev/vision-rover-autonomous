@@ -66,12 +66,14 @@ const ScrollCards = () => {
 
   return (
     <section className="py-20 px-4 bg-gray-50 min-h-screen flex items-center">
-      <div className="max-w-6xl mx-auto w-full">
-        <h2 className="text-3xl md:text-4xl font-bold text-cosmic-blue text-center mb-16">
-          Принцип работы
-        </h2>
+      <div className="w-full">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-cosmic-blue text-left mb-16">
+            Принцип работы
+          </h2>
+        </div>
 
-        <div className="relative">
+        <div className="max-w-6xl mx-auto relative">
           {/* Card container */}
           <div className="relative h-96 perspective-1000">
             {cards.map((card, index) => (
