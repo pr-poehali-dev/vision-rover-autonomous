@@ -76,24 +76,30 @@ const TeamSection = () => {
   return (
     <section className="py-20 px-4 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-cosmic-blue mb-16 text-left px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-cosmic-blue mb-8 text-left px-4">
           Разработчики
         </h2>
 
+        <div className="text-center mb-8">
+          <p className="text-gray-600 text-sm">
+            📱 Листайте горизонтально • Всего {team.length} разработчиков
+          </p>
+        </div>
+
         <div className="relative">
           <div
-            className="flex overflow-x-auto pb-6 scrollbar-hide snap-x snap-mandatory"
+            className="flex overflow-x-auto pb-6 scrollbar-hide snap-x snap-mandatory gap-4"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
               minWidth: "100%",
             }}
           >
-            <div className="flex" style={{ minWidth: "max-content" }}>
+            <div className="flex gap-4" style={{ minWidth: "max-content" }}>
               {team.map((member, index) => (
                 <div
                   key={index}
-                  className={`relative flex-shrink-0 w-80 h-96 bg-gradient-to-br ${member.gradient} cursor-pointer transition-all duration-300 hover:scale-105 snap-center ${
+                  className={`relative flex-shrink-0 w-80 h-96 bg-gradient-to-br ${member.gradient} cursor-pointer transition-all duration-300 hover:scale-105 snap-center rounded-2xl ${
                     activeCard === index
                       ? "ring-4 ring-white ring-opacity-50"
                       : ""
