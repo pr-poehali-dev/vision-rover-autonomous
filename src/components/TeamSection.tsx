@@ -29,7 +29,7 @@ const TeamSection = () => {
   return (
     <section className="py-20 px-4 bg-white">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-cosmic-blue mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-cosmic-blue mb-16 text-left">
           Разработчики
         </h2>
 

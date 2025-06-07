@@ -4,7 +4,7 @@ const FinalCTA = () => {
   return (
     <section className="py-20 px-4 bg-cosmic-blue">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-left">
           Протестируйте возможности робота
         </h2>
         <p className="text-xl text-gray-300 mb-8 leading-relaxed">

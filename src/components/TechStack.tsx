@@ -10,7 +10,7 @@ const TechStack = () => {
   return (
     <section className="py-20 px-4 bg-gray-50">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-cosmic-blue mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-cosmic-blue mb-16 text-left">
           Наш стек
         </h2>
 
