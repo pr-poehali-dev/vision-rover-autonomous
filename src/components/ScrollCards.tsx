@@ -72,18 +72,6 @@ const ScrollCards = () => {
         </h2>
 
         <div className="relative">
-          {/* Progress indicators */}
-          <div className="flex justify-center mb-8 space-x-2">
-            {cards.map((_, index) => (
-              <div
-                key={index}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentCard ? "bg-orange-500" : "bg-gray-300"
-                }`}
-              />
-            ))}
-          </div>
-
           {/* Card container */}
           <div className="relative h-96 perspective-1000">
             {cards.map((card, index) => (
@@ -128,6 +116,18 @@ const ScrollCards = () => {
                   <div className="absolute -left-20 -top-20 w-32 h-32 bg-white/5 rounded-full blur-2xl" />
                 </div>
               </div>
+            ))}
+          </div>
+
+          {/* Progress indicators moved to bottom */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {cards.map((_, index) => (
+              <div
+                key={index}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentCard ? "bg-orange-500" : "bg-gray-300"
+                }`}
+              />
             ))}
           </div>
 
