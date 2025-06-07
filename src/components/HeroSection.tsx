@@ -28,7 +28,7 @@ const HeroSection = () => {
           <img
             src="https://cdn.poehali.dev/files/8bfe3c1b-ebf7-49fc-81c9-c8501760f369.png"
             alt="AI робот с символом искусственного интеллекта"
-            className="max-w-full h-auto max-h-96 object-contain rounded-[20px]"
+            className="max-w-full h-auto max-h-96 object-contain rounded-3xl"
           />
         </div>
       </div>
