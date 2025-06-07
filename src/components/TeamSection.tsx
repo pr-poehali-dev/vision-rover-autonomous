@@ -56,6 +56,8 @@ const TeamSection = () => {
     },
   ];
 
+  const cardColors = ["#F7633D", "#78CBB4", "#FF80A9", "#3843D0", "#F7633D"];
+
   const visibleCards = 3;
   const maxSlide = Math.max(0, team.length - visibleCards);
 
@@ -168,7 +170,12 @@ const TeamSection = () => {
                       </div>
 
                       {/* Обратная сторона карточки */}
-                      <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-cosmic-blue to-indigo-800">
+                      <div
+                        className="absolute inset-0 backface-hidden rotate-y-180 rounded-3xl overflow-hidden shadow-xl"
+                        style={{
+                          background: `linear-gradient(135deg, ${cardColors[index]}, ${cardColors[index]}dd)`,
+                        }}
+                      >
                         <div className="h-full p-6 flex flex-col justify-center items-center text-center">
                           <Icon
                             name="Quote"
