@@ -148,9 +148,7 @@ const ScrollCards = () => {
 
           {/* Navigation hint */}
           <div className="text-center mt-8">
-            <p className="text-gray-500 text-sm">
-              {isInSection ? "Прокрутите для переключения карточек" : ""}
-            </p>
+            <p className="text-gray-500 text-sm">{isInSection ? "" : ""}</p>
           </div>
         </div>
       </div>
