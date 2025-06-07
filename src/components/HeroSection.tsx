@@ -29,8 +29,8 @@ const HeroSection = () => {
         </div>
         <div className="flex justify-center lg:justify-end">
           <img
-            src="https://cdn.poehali.dev/files/8bfe3c1b-ebf7-49fc-81c9-c8501760f369.png"
-            alt="AI робот с символом искусственного интеллекта"
+            src="https://cdn.poehali.dev/files/76d06438-2d9b-4f4b-a17e-c543a09039fd.png"
+            alt="Роботизированные руки держат голографический мозг с надписью AI"
             className="max-w-full h-auto max-h-96 object-contain rounded-3xl"
           />
         </div>
