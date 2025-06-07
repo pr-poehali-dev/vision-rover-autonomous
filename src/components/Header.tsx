@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/50">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-gray-200/50 bg-[#ffffff00]">
       <div className="max-w-6xl mx-auto py-4 px-0">
         <div className="flex items-center justify-between">
           {/* Логотип */}
