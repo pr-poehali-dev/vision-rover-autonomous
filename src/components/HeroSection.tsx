@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <section
-      className="min-h-[50vh] bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 flex items-center justify-center px-4 py-8 relative"
+      className="min-h-[50vh] bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 flex items-center justify-center relative py-[93px] px-0"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://cdn.poehali.dev/files/0c0e0981-2198-4b60-81a1-fbeb6b20fcfa.png')`,
         backgroundSize: "cover",
