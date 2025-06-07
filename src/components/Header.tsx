@@ -11,9 +11,7 @@ const Header = () => {
             <div className="w-8 h-8 bg-[#78CBB4] rounded-lg flex items-center justify-center">
               <Icon name="Bot" size={20} className="text-white" />
             </div>
-            <span className="text-xl font-bold text-[#012F2C]">
-              Vision Rover
-            </span>
+            <span className="text-xl font-bold text-[#012F2C]">VR</span>
           </div>
 
           {/* Навигация */}
