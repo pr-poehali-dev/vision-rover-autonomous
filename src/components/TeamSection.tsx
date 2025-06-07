@@ -5,6 +5,7 @@ interface TeamMember {
   name: string;
   role: string;
   image: string;
+  quote: string;
 }
 
 const TeamSection = () => {
@@ -18,30 +19,40 @@ const TeamSection = () => {
       role: "Tech Lead",
       image:
         "https://cdn.poehali.dev/files/d0f70dd4-8f72-4ca6-bf7d-a7b386990989.jpg",
+      quote:
+        "Автономный разведчик — это не просто дрон, это искусственный интеллект, способный принимать решения в экстремальных условиях космоса.",
     },
     {
       name: "Мария Смирнова",
       role: "AI Engineer",
       image:
         "https://cdn.poehali.dev/files/30c54906-f552-41f5-a8f8-ab31c30c0683.jpg",
+      quote:
+        "Нейросети разведчика обучены на миллионах космических сценариев. Он может адаптироваться к любой неизвестной ситуации.",
     },
     {
       name: "Дмитрий Козлов",
       role: "Hardware Engineer",
       image:
         "https://cdn.poehali.dev/files/2cda610a-ae2e-4a21-9567-3976b38456b5.jpg",
+      quote:
+        "Каждая деталь разведчика проектировалась для работы в вакууме. Он выдержит температуры от -270°C до +120°C.",
     },
     {
       name: "Анна Васильева",
       role: "Product Manager",
       image:
         "https://cdn.poehali.dev/files/b78145f3-138a-471c-83b2-ce7cf0573471.jpg",
+      quote:
+        "Автономный разведчик откроет новую эру исследований. Он сможет работать годами без связи с Землей.",
     },
     {
       name: "Игорь Новиков",
       role: "Systems Architect",
       image:
         "https://cdn.poehali.dev/files/34e9adea-c0db-484a-b3c6-c249d47b73b5.jpg",
+      quote:
+        "Архитектура разведчика позволяет ему самостоятельно ремонтировать себя и адаптировать алгоритмы в реальном времени.",
     },
   ];
 
@@ -125,26 +136,51 @@ const TeamSection = () => {
                 >
                   <div
                     className={`relative group cursor-pointer transition-all duration-300 hover:scale-102`}
+                    onClick={() => handleCardClick(index)}
                   >
-                    {/* Основная карточка */}
+                    {/* Flip Container */}
                     <div
-                      className="relative h-[400px] rounded-3xl overflow-hidden shadow-xl bg-cover bg-center"
-                      style={{
-                        backgroundImage: `url(${member.image})`,
-                      }}
+                      className={`relative h-[400px] transition-transform duration-700 transform-style-preserve-3d ${
+                        activeCard === index ? "rotate-y-180" : ""
+                      }`}
                     >
-                      {/* Темный overlay для читаемости текста */}
-                      <div className="absolute inset-0 bg-black/40"></div>
+                      {/* Лицевая сторона карточки */}
+                      <div
+                        className="absolute inset-0 backface-hidden rounded-3xl overflow-hidden shadow-xl bg-cover bg-center"
+                        style={{
+                          backgroundImage: `url(${member.image})`,
+                        }}
+                      >
+                        {/* Темный overlay для читаемости текста */}
+                        <div className="absolute inset-0 bg-black/40"></div>
 
-                      {/* Контент карточки */}
-                      <div className="relative h-full p-6 flex flex-col justify-end z-10">
-                        <div className="text-white text-center">
-                          <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">
-                            {member.name}
-                          </h3>
-                          <p className="text-white/90 text-lg drop-shadow-md">
-                            {member.role}
-                          </p>
+                        {/* Контент лицевой стороны */}
+                        <div className="relative h-full p-6 flex flex-col justify-end z-10">
+                          <div className="text-white text-center">
+                            <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">
+                              {member.name}
+                            </h3>
+                            <p className="text-white/90 text-lg drop-shadow-md">
+                              {member.role}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Обратная сторона карточки */}
+                      <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-cosmic-blue to-indigo-800">
+                        <div className="h-full p-6 flex flex-col justify-center items-center text-center">
+                          <Icon
+                            name="Quote"
+                            size={32}
+                            className="text-white/70 mb-4"
+                          />
+                          <blockquote className="text-white text-lg leading-relaxed italic mb-4">
+                            "{member.quote}"
+                          </blockquote>
+                          <cite className="text-white/80 font-semibold">
+                            — {member.name}
+                          </cite>
                         </div>
                       </div>
                     </div>
