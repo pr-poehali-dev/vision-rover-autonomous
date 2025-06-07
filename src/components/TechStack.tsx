@@ -34,7 +34,7 @@ const TechStack = () => {
           <p className="text-gray-600 text-lg max-w-2xl"></p>
         </div>
 
-        {/* GitHub Repository Widget */}
+        {/* Основные технологии */}
         <div className="mb-16 text-center">
           <div className="inline-flex items-center bg-white rounded-xl px-8 py-5 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
             <Icon name="Github" size={28} className="text-cosmic-blue mr-4" />
