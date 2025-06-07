@@ -31,21 +31,23 @@ const TechStack = () => {
           Технологический стек ровера
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="flex flex-col gap-6">
           {technologies.map((tech, index) => (
             <div
               key={index}
               className={`${tech.color} rounded-2xl p-6 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
             >
-              <div className="flex flex-col items-center text-center h-full">
-                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+              <div className="flex items-center gap-6">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
                   <Icon name={tech.icon} size={24} className="text-white" />
                 </div>
 
-                <h3 className="text-xl font-bold mb-3">{tech.name}</h3>
-                <p className="text-white/90 text-sm leading-relaxed flex-1">
-                  {tech.description}
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-2">{tech.name}</h3>
+                  <p className="text-white/90 text-sm leading-relaxed">
+                    {tech.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
