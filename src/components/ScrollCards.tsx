@@ -83,7 +83,7 @@ const ScrollCards = () => {
       ref={sectionRef}
       className="bg-gray-50 min-h-screen flex items-center px-0 py-0"
     >
-      <div className="w-[70%] mx-auto">
+      <div className="max-w-6xl mx-auto w-full">
         <h2 className="text-3xl md:text-4xl font-bold text-left mb-8 text-[#012F2C]">
           Принципы работы
         </h2>

@@ -26,7 +26,7 @@ const TechStack = () => {
 
   return (
     <section className="py-20 px-4 bg-gray-50">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-bold text-[#012F2C] mb-12 text-left">
           Технологический стек ровера
         </h2>
