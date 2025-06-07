@@ -24,7 +24,7 @@ const HeroSection = () => {
             Explore Tools
           </Button>
         </div>
-        <div className="flex justify-center lg:justify-start lg:pl-8">
+        <div className="flex justify-center lg:justify-end">
           <img
             src="https://cdn.poehali.dev/files/8bfe3c1b-ebf7-49fc-81c9-c8501760f369.png"
             alt="AI робот с символом искусственного интеллекта"
