@@ -106,7 +106,7 @@ const ScrollCards = () => {
                 }}
               >
                 <div
-                  className={`${index === 0 || index === 1 ? "relative" : card.color} rounded-3xl p-8 md:p-12 text-white shadow-2xl h-full flex flex-col justify-center relative overflow-hidden`}
+                  className={`${index === 0 || index === 1 || index === 2 ? "relative" : card.color} rounded-3xl p-8 md:p-12 text-white shadow-2xl h-full flex flex-col justify-center relative overflow-hidden`}
                   style={
                     index === 0
                       ? {
@@ -122,11 +122,18 @@ const ScrollCards = () => {
                             backgroundPosition: "center",
                             backgroundRepeat: "no-repeat",
                           }
-                        : {}
+                        : index === 2
+                          ? {
+                              backgroundImage: `url('https://cdn.poehali.dev/files/06699ecd-b695-451a-a370-96b9e17ed226.png')`,
+                              backgroundSize: "cover",
+                              backgroundPosition: "center",
+                              backgroundRepeat: "no-repeat",
+                            }
+                          : {}
                   }
                 >
-                  {/* Overlay for text readability on first and second cards */}
-                  {(index === 0 || index === 1) && (
+                  {/* Overlay for text readability on all cards */}
+                  {(index === 0 || index === 1 || index === 2) && (
                     <div className="absolute inset-0 bg-black/20 rounded-3xl" />
                   )}
 
