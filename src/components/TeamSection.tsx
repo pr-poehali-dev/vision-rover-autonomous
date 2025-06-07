@@ -151,9 +151,9 @@ const TeamSection = () => {
                         <div className="absolute inset-0 bg-black/40"></div>
 
                         {/* Контент лицевой стороны */}
-                        <div className="relative h-full p-6 flex flex-col justify-end z-10">
-                          <div className="text-white text-center">
-                            <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">
+                        <div className="relative h-full p-6 flex flex-col justify-start z-10">
+                          <div className="text-white text-left">
+                            <h3 className="text-2xl font-bold mb-1 drop-shadow-lg">
                               {member.name}
                             </h3>
                             <p className="text-white/90 text-lg drop-shadow-md">
