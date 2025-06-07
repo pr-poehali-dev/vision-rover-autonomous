@@ -58,7 +58,8 @@ const TeamSection = () => {
 
   const cardColors = ["#F7633D", "#78CBB4", "#FF80A9", "#F7633D", "#3843D0"];
 
-  const visibleCards = 3;
+  const visibleCards =
+    window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1;
   const maxSlide = Math.max(0, team.length - visibleCards);
 
   // Автопрокрутка
@@ -93,9 +94,9 @@ const TeamSection = () => {
   };
 
   return (
-    <section className="px-4 bg-gray-50 py-[114px]">
+    <section className="px-4 sm:px-6 bg-gray-50 py-12 sm:py-16 lg:py-[114px]">
       <div className="max-w-6xl mx-auto w-full">
-        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-left text-[#012F2C]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-16 text-center sm:text-left text-[#012F2C]">
           Разработчики
         </h2>
 
@@ -104,20 +105,38 @@ const TeamSection = () => {
           {/* Навигационные кнопки */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110"
+            className="absolute left-0 sm:left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-2 sm:p-3 shadow-lg transition-all duration-200 hover:scale-110"
           >
-            <Icon name="ChevronLeft" size={24} className="text-cosmic-blue" />
+            <Icon
+              name="ChevronLeft"
+              size={20}
+              className="text-cosmic-blue sm:hidden"
+            />
+            <Icon
+              name="ChevronLeft"
+              size={24}
+              className="text-cosmic-blue hidden sm:block"
+            />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110"
+            className="absolute right-0 sm:right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-2 sm:p-3 shadow-lg transition-all duration-200 hover:scale-110"
           >
-            <Icon name="ChevronRight" size={24} className="text-cosmic-blue" />
+            <Icon
+              name="ChevronRight"
+              size={20}
+              className="text-cosmic-blue sm:hidden"
+            />
+            <Icon
+              name="ChevronRight"
+              size={24}
+              className="text-cosmic-blue hidden sm:block"
+            />
           </button>
 
           {/* Карточки команды */}
-          <div className="overflow-hidden">
+          <div className="overflow-hidden mx-8 sm:mx-12">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
@@ -127,7 +146,7 @@ const TeamSection = () => {
               {team.map((member, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 px-3"
+                  className="flex-shrink-0 px-1.5 sm:px-3"
                   style={{ width: `${100 / visibleCards}%` }}
                 >
                   <div
@@ -136,13 +155,13 @@ const TeamSection = () => {
                   >
                     {/* Flip Container */}
                     <div
-                      className={`relative h-[400px] transition-transform duration-700 transform-style-preserve-3d ${
+                      className={`relative h-80 sm:h-[400px] transition-transform duration-700 transform-style-preserve-3d ${
                         activeCard === index ? "rotate-y-180" : ""
                       }`}
                     >
                       {/* Лицевая сторона карточки */}
                       <div
-                        className="absolute inset-0 backface-hidden rounded-3xl overflow-hidden shadow-xl bg-cover bg-center"
+                        className="absolute inset-0 backface-hidden rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl bg-cover bg-center"
                         style={{
                           backgroundImage: `url(${member.image})`,
                         }}
@@ -151,12 +170,12 @@ const TeamSection = () => {
                         <div className="absolute inset-0 bg-black/40"></div>
 
                         {/* Контент лицевой стороны */}
-                        <div className="relative h-full p-6 flex flex-col justify-start z-10">
+                        <div className="relative h-full p-4 sm:p-6 flex flex-col justify-start z-10">
                           <div className="text-white text-left">
-                            <h3 className="text-2xl font-bold mb-1 drop-shadow-lg">
+                            <h3 className="text-lg sm:text-2xl font-bold mb-1 drop-shadow-lg">
                               {member.name}
                             </h3>
-                            <p className="text-white/90 text-lg drop-shadow-md">
+                            <p className="text-white/90 text-sm sm:text-lg drop-shadow-md">
                               {member.role}
                             </p>
                           </div>
@@ -165,15 +184,15 @@ const TeamSection = () => {
 
                       {/* Обратная сторона карточки */}
                       <div
-                        className="absolute inset-0 backface-hidden rotate-y-180 rounded-3xl overflow-hidden shadow-xl"
+                        className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl"
                         style={{
                           background: `linear-gradient(135deg, ${cardColors[index]}, ${cardColors[index]}dd)`,
                         }}
                       >
-                        <div className="h-full p-6 flex flex-col justify-between">
+                        <div className="h-full p-4 sm:p-6 flex flex-col justify-between">
                           {/* Имя в левом верхнем углу */}
                           <div className="text-left">
-                            <cite className="text-white font-bold text-xl">
+                            <cite className="text-white font-bold text-base sm:text-xl">
                               {member.name}
                             </cite>
                           </div>
@@ -182,10 +201,15 @@ const TeamSection = () => {
                           <div className="flex-1 flex flex-col justify-center">
                             <Icon
                               name="Quote"
-                              size={32}
-                              className="text-white/70 mb-4"
+                              size={24}
+                              className="text-white/70 mb-3 sm:hidden"
                             />
-                            <blockquote className="text-white text-lg leading-relaxed italic text-left">
+                            <Icon
+                              name="Quote"
+                              size={32}
+                              className="text-white/70 mb-4 hidden sm:block"
+                            />
+                            <blockquote className="text-white text-sm sm:text-lg leading-relaxed italic text-left">
                               "{member.quote}"
                             </blockquote>
                           </div>
@@ -200,20 +224,20 @@ const TeamSection = () => {
         </div>
 
         {/* Индикаторы слайдов */}
-        <div className="flex justify-center space-x-2 mb-4">
-          {team.map((_, index) => (
+        <div className="flex justify-center space-x-2 mb-4 mt-6">
+          {Array.from({ length: maxSlide + 1 }).map((_, index) => (
             <button
               key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentSlide === index ? "bg-white" : "bg-white/50"
+              onClick={() => goToSlide(index)}
+              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                currentSlide === index ? "bg-[#012F2C]" : "bg-gray-300"
               }`}
             />
           ))}
         </div>
 
         {/* Подсказка о кликабельности карточек */}
-        <p className="text-left text-sm text-[#012F2C]">
+        <p className="text-center sm:text-left text-xs sm:text-sm text-[#012F2C]">
           Нажмите на карточку, чтобы увидеть цитату
         </p>
       </div>
