@@ -4,10 +4,10 @@ const FinalCTA = () => {
   return (
     <section className="py-20 px-4 bg-[#78CBB4]">
       <div className="max-w-6xl mx-auto w-full">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-left">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-left text-[#012F2C]">
           Протестируйте возможности робота
         </h2>
-        <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+        <p className="mb-8 leading-relaxed text-[#195f5a] font-light text-lg">
           Получите эксклюзивный доступ к демонстрации Vision Rover
         </p>
         <Button
