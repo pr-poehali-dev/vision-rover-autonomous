@@ -147,15 +147,6 @@ const TeamSection = () => {
           </p>
         </div>
       </div>
-
-      <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        div[style*="WebkitOverflowScrolling"]::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
   );
 };
