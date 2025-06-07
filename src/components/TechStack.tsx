@@ -80,7 +80,6 @@ const TechStack = () => {
         {/* Additional Info */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center px-6 py-3 bg-cosmic-blue/5 rounded-full">
-            <Icon name="Zap" size={20} className="text-cosmic-blue mr-2" />
             <span className="text-cosmic-blue font-medium">
               Готов к развертыванию в космических условиях
             </span>
