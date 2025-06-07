@@ -16,7 +16,7 @@ const TeamSection = () => {
   const team: TeamMember[] = [
     {
       name: "Алексей Петров",
-      role: "Tech Lead",
+      role: "Технический директор",
       image:
         "https://cdn.poehali.dev/files/d0f70dd4-8f72-4ca6-bf7d-a7b386990989.jpg",
       quote:
@@ -24,7 +24,7 @@ const TeamSection = () => {
     },
     {
       name: "Мария Смирнова",
-      role: "AI Engineer",
+      role: "Инженер ИИ",
       image:
         "https://cdn.poehali.dev/files/30c54906-f552-41f5-a8f8-ab31c30c0683.jpg",
       quote:
@@ -32,7 +32,7 @@ const TeamSection = () => {
     },
     {
       name: "Дмитрий Козлов",
-      role: "Hardware Engineer",
+      role: "Инженер аппаратуры",
       image:
         "https://cdn.poehali.dev/files/2cda610a-ae2e-4a21-9567-3976b38456b5.jpg",
       quote:
@@ -40,7 +40,7 @@ const TeamSection = () => {
     },
     {
       name: "Анна Васильева",
-      role: "Product Manager",
+      role: "Менеджер продукта",
       image:
         "https://cdn.poehali.dev/files/b78145f3-138a-471c-83b2-ce7cf0573471.jpg",
       quote:
@@ -48,7 +48,7 @@ const TeamSection = () => {
     },
     {
       name: "Игорь Новиков",
-      role: "Systems Architect",
+      role: "Системный архитектор",
       image:
         "https://cdn.poehali.dev/files/34e9adea-c0db-484a-b3c6-c249d47b73b5.jpg",
       quote:
