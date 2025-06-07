@@ -204,7 +204,7 @@ const TeamSection = () => {
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-200 ${
                 currentSlide === index
-                  ? "bg-cosmic-blue scale-125"
+                  ? "bg-[#012F2C] scale-125"
                   : "bg-gray-300 hover:bg-gray-400"
               }`}
             />
