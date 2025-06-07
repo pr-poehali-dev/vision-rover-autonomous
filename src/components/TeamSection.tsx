@@ -170,18 +170,25 @@ const TeamSection = () => {
                           background: `linear-gradient(135deg, ${cardColors[index]}, ${cardColors[index]}dd)`,
                         }}
                       >
-                        <div className="h-full p-6 flex flex-col justify-center items-center text-center">
-                          <Icon
-                            name="Quote"
-                            size={32}
-                            className="text-white/70 mb-4"
-                          />
-                          <blockquote className="text-white text-lg leading-relaxed italic mb-4">
-                            "{member.quote}"
-                          </blockquote>
-                          <cite className="text-white/80 font-semibold">
-                            — {member.name}
-                          </cite>
+                        <div className="h-full p-6 flex flex-col justify-between">
+                          {/* Имя в левом верхнем углу */}
+                          <div className="text-left">
+                            <cite className="text-white font-bold text-xl">
+                              {member.name}
+                            </cite>
+                          </div>
+
+                          {/* Цитата с левым выравниванием */}
+                          <div className="flex-1 flex flex-col justify-center">
+                            <Icon
+                              name="Quote"
+                              size={32}
+                              className="text-white/70 mb-4"
+                            />
+                            <blockquote className="text-white text-lg leading-relaxed italic text-left">
+                              "{member.quote}"
+                            </blockquote>
+                          </div>
                         </div>
                       </div>
                     </div>
