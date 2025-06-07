@@ -49,6 +49,15 @@ const TeamSection = () => {
         "Архитектура космических систем требует баланса между инновациями и надежностью. Мы строим мосты в будущее.",
       gradient: "from-green-400 to-emerald-500",
     },
+    {
+      name: "Елена Кузнецова",
+      role: "Data Scientist",
+      image:
+        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face",
+      quote:
+        "Данные из космоса содержат ответы на множество вопросов. Наша задача - научить машины видеть то, что не замечает человеческий глаз.",
+      gradient: "from-indigo-400 to-violet-500",
+    },
   ];
 
   const handleCardClick = (index: number) => {
@@ -64,25 +73,25 @@ const TeamSection = () => {
 
         <div className="relative">
           <div
-            className="flex gap-6 overflow-x-auto pb-6 scrollbar-hide snap-x snap-mandatory"
+            className="flex overflow-x-auto pb-6 scrollbar-hide snap-x snap-mandatory"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
               minWidth: "100%",
             }}
           >
-            <div className="flex gap-6" style={{ minWidth: "max-content" }}>
+            <div className="flex" style={{ minWidth: "max-content" }}>
               {team.map((member, index) => (
                 <div
                   key={index}
-                  className={`relative flex-shrink-0 w-80 h-96 rounded-2xl bg-gradient-to-br ${member.gradient} cursor-pointer transition-all duration-300 hover:scale-105 snap-center ${
+                  className={`relative flex-shrink-0 w-80 h-96 bg-gradient-to-br ${member.gradient} cursor-pointer transition-all duration-300 hover:scale-105 snap-center ${
                     activeCard === index
                       ? "ring-4 ring-white ring-opacity-50"
                       : ""
                   }`}
                   onClick={() => handleCardClick(index)}
                 >
-                  <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                  <div className="absolute inset-0 overflow-hidden">
                     <div className="flex items-end h-full p-6">
                       <div className="flex items-center gap-4 w-full">
                         <div className="w-16 h-16 rounded-full overflow-hidden border-3 border-white/20">
@@ -102,7 +111,7 @@ const TeamSection = () => {
                     </div>
 
                     {activeCard === index && (
-                      <div className="absolute inset-0 bg-black/80 rounded-2xl flex items-center justify-center p-6 animate-fade-in">
+                      <div className="absolute inset-0 bg-black/80 flex items-center justify-center p-6 animate-fade-in">
                         <div className="text-center text-white">
                           <p className="text-lg leading-relaxed mb-4">
                             "{member.quote}"
