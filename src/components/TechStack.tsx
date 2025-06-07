@@ -59,21 +59,19 @@ const TechStack = () => {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl border border-gray-100 hover:border-[#78CBB4]/40 transition-all duration-300 hover:-translate-y-1"
+              className={`group relative ${tech.color} rounded-2xl p-8 shadow-lg hover:shadow-xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-1`}
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1 pr-8">
-                  <h3 className="text-2xl font-bold text-[#012F2C] mb-4 group-hover:text-[#78CBB4] transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-white/90 transition-colors duration-300">
                     {tech.name}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-base">
+                  <p className="text-white/80 leading-relaxed text-base">
                     {tech.description}
                   </p>
                 </div>
 
-                <div
-                  className={`w-16 h-16 ${tech.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 flex-shrink-0`}
-                >
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 flex-shrink-0">
                   <Icon name={tech.icon} size={28} className="text-white" />
                 </div>
               </div>
