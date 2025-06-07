@@ -81,14 +81,11 @@ const ScrollCards = () => {
                   index === currentCard
                     ? "opacity-100 translate-y-0 scale-100 rotate-0"
                     : index < currentCard
-                      ? "opacity-70 -translate-y-3 scale-95 -rotate-1"
-                      : "opacity-70 translate-y-3 scale-95 rotate-1"
+                      ? "opacity-60 -translate-y-2 scale-96 -rotate-1"
+                      : "opacity-60 translate-y-2 scale-96 rotate-1"
                 }`}
                 style={{
-                  zIndex:
-                    index === currentCard
-                      ? 10
-                      : cards.length - Math.abs(index - currentCard),
+                  zIndex: index === currentCard ? 30 : 20 - index,
                 }}
               >
                 <div
