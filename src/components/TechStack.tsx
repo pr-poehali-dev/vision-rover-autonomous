@@ -7,76 +7,51 @@ const TechStack = () => {
       description:
         "Интеллектуальная система автономного управления и планирования маршрутов",
       icon: "Brain",
-      color: "bg-[#3843D0]",
+      color: "bg-gradient-to-r from-blue-500 to-purple-600",
     },
     {
       name: "Сенсорный массив",
       description:
         "Комплекс высокоточных датчиков для анализа окружающей среды",
       icon: "Radar",
-      color: "bg-[#F7633D]",
+      color: "bg-gradient-to-r from-orange-400 to-red-500",
     },
     {
       name: "Vision-rover",
       description: "Открытый исходный код",
       icon: "Github",
-      color: "bg-[#FF80A9]",
+      color: "bg-gradient-to-r from-pink-400 to-pink-500",
     },
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-6xl mx-auto w-full">
-        <div className="text-left mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#012F2C]">
-            Технологический стек ровера
-          </h2>
-          <p className="text-gray-600 text-lg max-w-2xl"></p>
-        </div>
+    <section className="py-20 px-4 bg-gray-50">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#012F2C] mb-12">
+          Технологический стек ровера
+        </h2>
 
-        {/* Основные технологии */}
-        <div className="mb-16 text-center">
-          <div className="inline-flex items-center bg-white rounded-xl px-8 py-5 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-            <Icon name="Github" size={28} className="text-cosmic-blue mr-4" />
-            <div className="text-left">
-              <div className="text-cosmic-blue font-bold text-lg">
-                vision-rover
-              </div>
-              <div className="text-gray-500 text-sm">Открытый исходный код</div>
-            </div>
-            <div className="ml-6 flex items-center">
-              <Icon name="Star" size={18} className="text-yellow-500 mr-2" />
-              <span className="text-gray-700 font-semibold text-lg">2.4k</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Technologies Grid */}
-        <div className="grid gap-8">
+        <div className="space-y-4">
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className={`group relative ${tech.color} rounded-2xl p-8 shadow-lg hover:shadow-xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-1 bg-opacity-90`}
+              className={`${tech.color} rounded-2xl p-6 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
             >
-              <div className="flex items-start justify-between">
-                <div className="flex-1 pr-8">
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-white/90 transition-colors duration-300">
-                    {tech.name}
-                  </h3>
-                  <p className="text-white/80 leading-relaxed text-base">
+              <div className="flex items-center justify-between">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-2">{tech.name}</h3>
+                  <p className="text-white/90 text-sm leading-relaxed">
                     {tech.description}
                   </p>
                 </div>
 
-                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 flex-shrink-0">
-                  <Icon name={tech.icon} size={28} className="text-white" />
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center ml-6 flex-shrink-0">
+                  <Icon name={tech.icon} size={24} className="text-white" />
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        {/* Additional Info - removed empty content */}
       </div>
     </section>
   );
