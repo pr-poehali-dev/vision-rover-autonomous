@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
 const ScrollCards = () => {
   const [currentCard, setCurrentCard] = useState(0);
-  const [isScrollLocked, setIsScrollLocked] = useState(false);
+  const [isInSection, setIsInSection] = useState(false);
+  const [canScroll, setCanScroll] = useState(true);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const cards = [
     {
@@ -32,61 +34,55 @@ const ScrollCards = () => {
     },
   ];
 
+  // Intersection Observer для определения когда мы в секции
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-    let ticking = false;
+    if (!sectionRef.current) return;
 
-    const handleScroll = (e: Event) => {
-      // Предотвращаем скролл если он заблокирован
-      if (isScrollLocked) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInSection(entry.isIntersecting && entry.intersectionRatio > 0.5);
+      },
+      { threshold: [0, 0.5, 1] },
+    );
+
+    observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Обработка wheel событий только когда мы в секции
+  useEffect(() => {
+    if (!isInSection) return;
+
+    const handleWheel = (e: WheelEvent) => {
+      if (!canScroll) return;
+
+      const direction = e.deltaY > 0 ? "down" : "up";
+
+      // Переключаем карточки только если можем
+      if (direction === "down" && currentCard < cards.length - 1) {
         e.preventDefault();
-        return;
+        setCanScroll(false);
+        setCurrentCard((prev) => prev + 1);
+        setTimeout(() => setCanScroll(true), 800);
+      } else if (direction === "up" && currentCard > 0) {
+        e.preventDefault();
+        setCanScroll(false);
+        setCurrentCard((prev) => prev - 1);
+        setTimeout(() => setCanScroll(true), 800);
       }
-
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY;
-          const direction = currentScrollY > lastScrollY ? "down" : "up";
-
-          if (Math.abs(currentScrollY - lastScrollY) > 30) {
-            // Блокируем скролл вниз если не достигли последней карточки
-            if (direction === "down" && currentCard < cards.length - 1) {
-              setIsScrollLocked(true);
-              setCurrentCard((prev) => prev + 1);
-              // Разблокируем через время анимации
-              setTimeout(() => setIsScrollLocked(false), 1000);
-            }
-            // Блокируем скролл вверх если не достигли первой карточки
-            else if (direction === "up" && currentCard > 0) {
-              setIsScrollLocked(true);
-              setCurrentCard((prev) => prev - 1);
-              // Разблокируем через время анимации
-              setTimeout(() => setIsScrollLocked(false), 1000);
-            }
-
-            lastScrollY = currentScrollY;
-          }
-
-          ticking = false;
-        });
-        ticking = true;
-      }
+      // Если достигли края карточек - разрешаем обычный скролл
     };
 
-    // Добавляем обработчик с возможностью preventDefault
-    window.addEventListener("scroll", handleScroll, { passive: false });
-    window.addEventListener("wheel", handleScroll, { passive: false });
-    window.addEventListener("touchmove", handleScroll, { passive: false });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("wheel", handleScroll);
-      window.removeEventListener("touchmove", handleScroll);
-    };
-  }, [currentCard, cards.length, isScrollLocked]);
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    return () => window.removeEventListener("wheel", handleWheel);
+  }, [isInSection, currentCard, canScroll, cards.length]);
 
   return (
-    <section className="py-20 px-4 bg-gray-50 min-h-screen flex items-center">
+    <section
+      ref={sectionRef}
+      className="py-20 px-4 bg-gray-50 min-h-screen flex items-center"
+    >
       <div className="max-w-6xl mx-auto w-full">
         <h2 className="text-3xl md:text-4xl font-bold text-cosmic-blue text-left mb-16">
           Принципы работы
@@ -98,12 +94,12 @@ const ScrollCards = () => {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className={`absolute inset-0 transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] transform ${
+                className={`absolute inset-0 transition-all duration-800 ease-out transform ${
                   index === currentCard
                     ? "opacity-100 translate-y-0 scale-100 rotate-0"
                     : index < currentCard
-                      ? "opacity-60 -translate-y-2 scale-96 -rotate-1"
-                      : "opacity-60 translate-y-2 scale-96 rotate-1"
+                      ? "opacity-40 -translate-y-4 scale-95 -rotate-2"
+                      : "opacity-40 translate-y-4 scale-95 rotate-2"
                 }`}
                 style={{
                   zIndex: index === currentCard ? 30 : 20 - index,
@@ -137,12 +133,13 @@ const ScrollCards = () => {
             ))}
           </div>
 
-          {/* Progress indicators moved to bottom */}
+          {/* Progress indicators */}
           <div className="flex justify-center mt-8 space-x-2">
             {cards.map((_, index) => (
-              <div
+              <button
                 key={index}
-                className={`w-3 h-3 rounded-full transition-all duration-500 ${
+                onClick={() => setCurrentCard(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-500 hover:scale-125 ${
                   index === currentCard ? "bg-orange-500" : "bg-gray-300"
                 }`}
               />
@@ -151,7 +148,9 @@ const ScrollCards = () => {
 
           {/* Navigation hint */}
           <div className="text-center mt-8">
-            <p className="text-gray-500 text-sm"></p>
+            <p className="text-gray-500 text-sm">
+              {isInSection ? "Прокрутите для переключения карточек" : ""}
+            </p>
           </div>
         </div>
       </div>
