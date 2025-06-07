@@ -22,26 +22,24 @@ const Header = () => {
               href="#about"
               className="text-gray-700 hover:text-[#012F2C] transition-colors"
             >
-              О проекте
+              Принципы работы
             </a>
             <a
               href="#tech"
               className="text-gray-700 hover:text-[#012F2C] transition-colors"
             >
-              Технологии
+              Стек
             </a>
             <a
               href="#team"
               className="text-gray-700 hover:text-[#012F2C] transition-colors"
             >
-              Команда
+              Разработчики
             </a>
             <a
               href="#contact"
               className="text-gray-700 hover:text-[#012F2C] transition-colors"
-            >
-              Контакты
-            </a>
+            ></a>
           </nav>
 
           {/* CTA кнопка */}
