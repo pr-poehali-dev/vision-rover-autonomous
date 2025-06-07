@@ -27,7 +27,7 @@ const TeamSection = () => {
       name: "Алексей Петров",
       role: "Tech Lead",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+        "https://cdn.poehali.dev/files/d0f70dd4-8f72-4ca6-bf7d-a7b386990989.jpg",
       quote:
         "Автономные разведчики - это будущее исследования космоса. Наши технологии позволят человечеству достичь новых горизонтов.",
       gradient: "from-yellow-400 to-orange-500",
@@ -48,7 +48,7 @@ const TeamSection = () => {
       name: "Мария Смирнова",
       role: "AI Engineer",
       image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b105?w=400&h=400&fit=crop&crop=face",
+        "https://cdn.poehali.dev/files/30c54906-f552-41f5-a8f8-ab31c30c0683.jpg",
       quote:
         "Искусственный интеллект в космических миссиях должен быть надежным и адаптивным. Мы создаем системы, которые думают как исследователи.",
       gradient: "from-pink-300 to-purple-400",
@@ -69,7 +69,7 @@ const TeamSection = () => {
       name: "Дмитрий Козлов",
       role: "Hardware Engineer",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+        "https://cdn.poehali.dev/files/2cda610a-ae2e-4a21-9567-3976b38456b5.jpg",
       quote:
         "Каждый компонент должен выдерживать экстремальные условия космоса. Наша задача - создать технику, которая работает безотказно.",
       gradient: "from-blue-400 to-cyan-500",
@@ -90,7 +90,7 @@ const TeamSection = () => {
       name: "Анна Васильева",
       role: "Product Manager",
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+        "https://cdn.poehali.dev/files/b78145f3-138a-471c-83b2-ce7cf0573471.jpg",
       quote:
         "Успешная космическая миссия начинается с четкого планирования. Мы превращаем смелые идеи в реальные проекты.",
       gradient: "from-orange-400 to-red-500",
@@ -111,7 +111,7 @@ const TeamSection = () => {
       name: "Игорь Новиков",
       role: "Systems Architect",
       image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
+        "https://cdn.poehali.dev/files/34e9adea-c0db-484a-b3c6-c249d47b73b5.jpg",
       quote:
         "Архитектура космических систем требует баланса между инновациями и надежностью. Мы строим мосты в будущее.",
       gradient: "from-green-400 to-emerald-500",
