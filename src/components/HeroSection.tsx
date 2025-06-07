@@ -8,8 +8,8 @@ const HeroSection = () => {
         backgroundColor: "#78CBB4",
       }}
     >
-      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mx-[102px] px-0">
-        <div className="text-left">
+      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mx-4 lg:mx-8 px-4">
+        <div className="text-left max-w-none">
           <h1
             className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             style={{ color: "#012F2C" }}
