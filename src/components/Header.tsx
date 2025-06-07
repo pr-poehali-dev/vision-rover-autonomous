@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-gray-200/50 bg-[#ffffff00]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/50">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Логотип */}
@@ -22,24 +22,26 @@ const Header = () => {
               href="#about"
               className="text-gray-700 hover:text-[#012F2C] transition-colors"
             >
-              Принципы работы
+              О проекте
             </a>
             <a
               href="#tech"
               className="text-gray-700 hover:text-[#012F2C] transition-colors"
             >
-              Стек
+              Технологии
             </a>
             <a
               href="#team"
               className="text-gray-700 hover:text-[#012F2C] transition-colors"
             >
-              Разработчики
+              Команда
             </a>
             <a
               href="#contact"
               className="text-gray-700 hover:text-[#012F2C] transition-colors"
-            ></a>
+            >
+              Контакты
+            </a>
           </nav>
 
           {/* CTA кнопка */}
