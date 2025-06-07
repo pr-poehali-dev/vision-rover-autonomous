@@ -9,9 +9,9 @@ const HeroSection = () => {
       }}
     >
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center lg:mx-8 px-0 mx-[42px]">
-        <div className="text-left max-w-none px-0 my-0 py-0">
+        <div className="text-left px-0 my-0 py-0 lg:pr-4">
           <h1
-            className="sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 px-0 text-6xl"
+            className="sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 px-0 text-6xl max-w-none"
             style={{ color: "#012F2C" }}
           >
             Vision Rover:
