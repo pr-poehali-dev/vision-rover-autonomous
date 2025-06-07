@@ -15,7 +15,7 @@ const FinalCTA = () => {
           <Input
             type="email"
             placeholder="Введите ваш email"
-            className="flex-1 text-lg px-4 py-6 rounded-xl border-white/30 bg-white/10 text-white placeholder:text-white/70 focus:border-white focus:ring-white/20"
+            className="flex-1 text-lg px-4 py-6 rounded-xl border-white/30 bg-white/10 text-[#195f5a] placeholder:text-white/70 focus:border-white focus:ring-white/20"
           />
           <Button
             className="text-white border border-white hover:bg-white/30 hover:shadow-white/20 hover:shadow-2xl transition-all duration-300 text-lg px-8 py-6 rounded-xl font-semibold whitespace-nowrap"
