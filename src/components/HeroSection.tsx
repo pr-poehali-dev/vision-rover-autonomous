@@ -3,17 +3,17 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <section
-      className="min-h-[50vh] bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 flex items-center justify-center relative py-[93px] px-0"
+      className="min-h-[50vh] flex items-center justify-center relative py-[93px] px-0"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://cdn.poehali.dev/files/9013aa20-8835-4833-800c-0267252b86e4.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        backgroundColor: "#78CBB4",
       }}
     >
       <div className="max-w-6xl mx-auto w-full px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div className="text-left">
-          <h1 className="sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-6 text-6xl">
+          <h1
+            className="sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 text-6xl"
+            style={{ color: "#012F2C" }}
+          >
             Vision Rover: Автономный разведчик
           </h1>
           <p className="text-gray-300 mb-6 leading-relaxed text-lg">
