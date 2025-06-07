@@ -96,48 +96,47 @@ const TeamSection = () => {
             }}
           >
             {team.map((member, index) => (
-                <div
-                  key={index}
-                  className={`relative flex-shrink-0 w-80 h-96 bg-gradient-to-br ${member.gradient} cursor-pointer transition-all duration-300 hover:scale-105 snap-center rounded-2xl ${
-                    activeCard === index
-                      ? "ring-4 ring-white ring-opacity-50"
-                      : ""
-                  }`}
-                  onClick={() => handleCardClick(index)}
-                >
-                  <div className="absolute inset-0 overflow-hidden">
-                    <div className="flex items-end h-full p-6">
-                      <div className="flex items-center gap-4 w-full">
-                        <div className="w-16 h-16 rounded-full overflow-hidden border-3 border-white/20">
-                          <img
-                            src={member.image}
-                            alt={member.name}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="text-white">
-                          <h3 className="text-xl font-bold leading-tight">
-                            {member.name}
-                          </h3>
-                          <p className="text-white/90 text-sm">{member.role}</p>
-                        </div>
+              <div
+                key={index}
+                className={`relative flex-shrink-0 w-80 h-96 bg-gradient-to-br ${member.gradient} cursor-pointer transition-all duration-300 hover:scale-105 snap-center rounded-2xl ${
+                  activeCard === index
+                    ? "ring-4 ring-white ring-opacity-50"
+                    : ""
+                }`}
+                onClick={() => handleCardClick(index)}
+              >
+                <div className="absolute inset-0 overflow-hidden">
+                  <div className="flex items-end h-full p-6">
+                    <div className="flex items-center gap-4 w-full">
+                      <div className="w-16 h-16 rounded-full overflow-hidden border-3 border-white/20">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="text-white">
+                        <h3 className="text-xl font-bold leading-tight">
+                          {member.name}
+                        </h3>
+                        <p className="text-white/90 text-sm">{member.role}</p>
                       </div>
                     </div>
-
-                    {activeCard === index && (
-                      <div className="absolute inset-0 bg-black/80 flex items-center justify-center p-6 animate-fade-in">
-                        <div className="text-center text-white">
-                          <p className="text-lg leading-relaxed mb-4">
-                            "{member.quote}"
-                          </p>
-                          <div className="w-8 h-0.5 bg-white/50 mx-auto"></div>
-                        </div>
-                      </div>
-                    )}
                   </div>
+
+                  {activeCard === index && (
+                    <div className="absolute inset-0 bg-black/80 flex items-center justify-center p-6 animate-fade-in">
+                      <div className="text-center text-white">
+                        <p className="text-lg leading-relaxed mb-4">
+                          "{member.quote}"
+                        </p>
+                        <div className="w-8 h-0.5 bg-white/50 mx-auto"></div>
+                      </div>
+                    </div>
+                  )}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
 
