@@ -258,32 +258,38 @@ const TeamSection = () => {
                   >
                     {/* Основная карточка */}
                     <div
-                      className={`relative h-[500px] bg-gradient-to-br ${member.gradient} rounded-3xl overflow-hidden shadow-xl`}
+                      className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl bg-cover bg-center"
+                      style={{
+                        backgroundImage: `url(${member.image})`,
+                      }}
                     >
+                      {/* Темный overlay для читаемости текста */}
+                      <div className="absolute inset-0 bg-black/60"></div>
+
                       {/* Фоновый паттерн */}
-                      <div className="absolute inset-0 opacity-10">
+                      <div className="absolute inset-0 opacity-5">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -translate-y-16 translate-x-16"></div>
                         <div className="absolute bottom-0 left-0 w-24 h-24 bg-white rounded-full translate-y-12 -translate-x-12"></div>
                       </div>
 
                       {/* Контент карточки */}
-                      <div className="relative h-full p-8 flex flex-col justify-between">
+                      <div className="relative h-full p-8 flex flex-col justify-between z-10">
                         <div className="flex items-center gap-4">
-                          <div className="w-20 h-20 rounded-2xl overflow-hidden border-4 border-white/30 shadow-lg">
-                            <img
-                              src={member.image}
-                              alt={member.name}
-                              className="w-full h-full object-cover"
+                          <div className="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm border-2 border-white/30 shadow-lg flex items-center justify-center">
+                            <Icon
+                              name="User"
+                              size={32}
+                              className="text-white"
                             />
                           </div>
                           <div className="text-white">
-                            <h3 className="text-2xl font-bold mb-1">
+                            <h3 className="text-2xl font-bold mb-1 drop-shadow-lg">
                               {member.name}
                             </h3>
-                            <p className="text-white/90 text-lg">
+                            <p className="text-white/95 text-lg drop-shadow-md">
                               {member.role}
                             </p>
-                            <p className="text-white/80 text-sm mt-1">
+                            <p className="text-white/85 text-sm mt-1 drop-shadow-md">
                               {member.experience}
                             </p>
                           </div>
