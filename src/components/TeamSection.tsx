@@ -56,7 +56,7 @@ const TeamSection = () => {
     },
   ];
 
-  const cardColors = ["#F7633D", "#78CBB4", "#FF80A9", "#3843D0", "#F7633D"];
+  const cardColors = ["#F7633D", "#78CBB4", "#FF80A9", "#F7633D", "#3843D0"];
 
   const visibleCards = 3;
   const maxSlide = Math.max(0, team.length - visibleCards);
