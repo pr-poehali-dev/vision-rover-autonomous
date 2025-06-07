@@ -133,9 +133,7 @@ const ScrollCards = () => {
 
           {/* Navigation hint */}
           <div className="text-center mt-8">
-            <p className="text-gray-500 text-sm">
-              Прокрутите вниз или вверх для переключения карточек
-            </p>
+            <p className="text-gray-500 text-sm"></p>
             <Icon
               name={scrollDirection === "down" ? "ChevronDown" : "ChevronUp"}
               size={20}
