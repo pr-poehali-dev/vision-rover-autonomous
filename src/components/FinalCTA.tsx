@@ -11,7 +11,7 @@ const FinalCTA = () => {
           Получите эксклюзивный доступ к демонстрации Vision Rover
         </p>
         <Button
-          className="text-white border border-white hover:bg-white/30 hover:shadow-white/20 hover:shadow-2xl transition-all duration-300 text-lg px-8 py-6 rounded-lg font-semibold"
+          className="text-white border border-white hover:bg-white/30 hover:shadow-white/20 hover:shadow-2xl transition-all duration-300 text-lg px-8 py-6 rounded-xl font-semibold"
           style={{ backgroundColor: "#195f5a4d" }}
         >
           Получить демо-доступ
