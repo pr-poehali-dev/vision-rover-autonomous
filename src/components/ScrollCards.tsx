@@ -10,30 +10,27 @@ const ScrollCards = () => {
   const cards = [
     {
       icon: "Radar",
-      title: "VISION ROVER",
-      subtitle: "Сканирование и анализ местности",
+      title: "Сканирование",
+      subtitle: "Анализ местности",
       description:
-        "Продвинутые алгоритмы сканирования анализируют окружающую среду в реальном времени",
-      color: "#F7633D",
-      bgColor: "bg-pink-200",
+        "Продвинутые алгоритмы сканирования анализируют окружающую среду в реальном времени, обеспечивая точную навигацию в любых условиях",
+      color: "bg-purple-600",
     },
     {
       icon: "Map",
-      title: "NAVIGATION SYSTEM",
-      subtitle: "Построение оптимального маршрута",
+      title: "Навигация",
+      subtitle: "Построение маршрута",
       description:
-        "Автономная система навигации создает маршруты, адаптируясь к условиям",
-      color: "#3843D0",
-      bgColor: "bg-blue-200",
+        "Автономная система навигации создает оптимальные маршруты, адаптируясь к изменяющимся условиям и препятствиям на пути",
+      color: "bg-blue-600",
     },
     {
       icon: "Sensor",
-      title: "DATA COLLECTION",
-      subtitle: "Комплексный сбор данных",
+      title: "Исследование",
+      subtitle: "Сбор данных",
       description:
-        "Система датчиков собирает критически важную информацию об окружающей среде",
-      color: "#FF80A9",
-      bgColor: "bg-green-200",
+        "Комплексная система датчиков собирает критически важную информацию об окружающей среде для дальнейшего анализа",
+      color: "bg-green-600",
     },
   ];
 
@@ -93,57 +90,71 @@ const ScrollCards = () => {
 
         <div className="relative">
           {/* Card container */}
-          <div className="space-y-6">
+          <div className="relative h-96 perspective-1000">
             {cards.map((card, index) => (
               <div
                 key={index}
-                className={`transition-all duration-800 ease-out transform ${
+                className={`absolute inset-0 transition-all duration-800 ease-out transform ${
                   index === currentCard
-                    ? "opacity-100 translate-x-0 scale-100"
-                    : "opacity-60 translate-x-4 scale-95"
+                    ? "opacity-100 translate-y-0 scale-100 rotate-0"
+                    : index < currentCard
+                      ? "opacity-40 -translate-y-4 scale-95 -rotate-2"
+                      : "opacity-40 translate-y-4 scale-95 rotate-2"
                 }`}
+                style={{
+                  zIndex: index === currentCard ? 30 : 20 - index,
+                }}
               >
                 <div
-                  className={`${card.bgColor} rounded-2xl p-8 relative overflow-hidden min-h-[140px] flex items-center justify-between shadow-lg hover:shadow-xl transition-shadow duration-300`}
+                  className="rounded-3xl p-8 md:p-12 text-white shadow-2xl h-full flex flex-col justify-center relative overflow-hidden"
+                  style={
+                    index === 0
+                      ? { backgroundColor: "#F7633D" }
+                      : index === 1
+                        ? { backgroundColor: "#3843D0" }
+                        : index === 2
+                          ? { backgroundColor: "#FF80A9" }
+                          : {}
+                  }
                 >
-                  {/* Content Section */}
-                  <div className="flex-1 pr-20">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-3 tracking-wide">
+                  {/* Overlay removed since we're using solid colors */}
+                  {(index === 0 || index === 1 || index === 2) && (
+                    <div className="absolute inset-0 rounded-3xl bg-[#00000000]" />
+                  )}
+
+                  {/* Top badge */}
+                  <div className="absolute top-6 right-6 z-10">
+                    <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
+                      {card.subtitle}
+                    </span>
+                  </div>
+
+                  {/* Content */}
+                  <div className="max-w-md pl-8 text-left">
+                    <h3 className="text-3xl md:text-4xl font-bold mb-6">
                       {card.title}
                     </h3>
-                    <p className="text-gray-700 text-base leading-relaxed max-w-lg">
+                    <p className="text-lg opacity-90 leading-relaxed">
                       {card.description}
                     </p>
                   </div>
 
-                  {/* Floating Icon */}
-                  <div className="absolute right-8 top-1/2 transform -translate-y-1/2">
-                    <div
-                      className="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg"
-                      style={{ backgroundColor: card.color }}
-                    >
-                      <Icon name={card.icon} size={28} className="text-white" />
-                    </div>
-                  </div>
-
-                  {/* Decorative elements */}
-                  <div className="absolute -right-4 -top-4 w-12 h-12 bg-white/30 rounded-full blur-sm" />
-                  <div className="absolute -left-4 -bottom-4 w-8 h-8 bg-white/20 rounded-full blur-sm" />
+                  {/* Background decoration */}
+                  <div className="absolute -right-20 -bottom-20 w-40 h-40 bg-white/5 rounded-full blur-3xl" />
+                  <div className="absolute -left-20 -top-20 w-32 h-32 bg-white/5 rounded-full blur-2xl" />
                 </div>
               </div>
             ))}
           </div>
 
           {/* Progress indicators */}
-          <div className="flex justify-center mt-12 space-x-3">
+          <div className="flex justify-center mt-8 space-x-2">
             {cards.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentCard(index)}
-                className={`w-4 h-4 rounded-full transition-all duration-500 hover:scale-125 border-2 ${
-                  index === currentCard
-                    ? "bg-orange-500 border-orange-500 shadow-lg"
-                    : "bg-transparent border-gray-400 hover:border-orange-400"
+                className={`w-3 h-3 rounded-full transition-all duration-500 hover:scale-125 ${
+                  index === currentCard ? "bg-orange-500" : "bg-gray-300"
                 }`}
               />
             ))}
