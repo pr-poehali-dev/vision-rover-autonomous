@@ -58,6 +58,15 @@ const TeamSection = () => {
         "Данные из космоса содержат ответы на множество вопросов. Наша задача - научить машины видеть то, что не замечает человеческий глаз.",
       gradient: "from-indigo-400 to-violet-500",
     },
+    {
+      name: "Сергей Волков",
+      role: "Robotics Engineer",
+      image:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+      quote:
+        "Роботы-исследователи должны быть автономными и умными. Мы создаём машины, которые могут принимать решения в неизвестных условиях.",
+      gradient: "from-teal-400 to-cyan-600",
+    },
   ];
 
   const handleCardClick = (index: number) => {
