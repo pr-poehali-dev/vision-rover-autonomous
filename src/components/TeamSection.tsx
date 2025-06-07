@@ -88,12 +88,21 @@ const TeamSection = () => {
 
         <div className="relative">
           <div
-            className="flex overflow-x-auto overflow-y-hidden pb-6 gap-4 scrollbar-hide"
+            className="flex gap-4 pb-6"
             style={{
+              overflowX: "auto",
+              overflowY: "hidden",
               scrollBehavior: "smooth",
               WebkitOverflowScrolling: "touch",
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
             }}
           >
+            <style jsx>{`
+              div::-webkit-scrollbar {
+                display: none;
+              }
+            `}</style>
             {team.map((member, index) => (
               <div
                 key={index}
