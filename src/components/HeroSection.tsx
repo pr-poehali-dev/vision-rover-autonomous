@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <section
-      className="min-h-[60vh] sm:min-h-[70vh] lg:min-h-[50vh] flex items-center justify-center relative py-16 sm:py-20 lg:py-[93px] px-4 sm:px-6"
+      className="min-h-[60vh] sm:min-h-[70vh] lg:min-h-[50vh] flex items-center justify-center relative py-[34px] sm:py-20 lg:py-[93px] px-4 sm:px-6"
       style={{
         backgroundColor: "#78CBB4",
       }}
