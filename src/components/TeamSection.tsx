@@ -88,10 +88,9 @@ const TeamSection = () => {
 
         <div className="relative">
           <div
-            className="flex overflow-x-auto pb-6 gap-4"
+            className="flex overflow-x-auto overflow-y-hidden pb-6 gap-4 scrollbar-hide"
             style={{
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
+              scrollBehavior: "smooth",
               WebkitOverflowScrolling: "touch",
             }}
           >
