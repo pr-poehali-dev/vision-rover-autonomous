@@ -19,7 +19,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["Roboto Condensed", "system-ui", "sans-serif"],
       },
       colors: {
         "cosmic-blue": "#0a1128",
