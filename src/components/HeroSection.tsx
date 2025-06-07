@@ -7,9 +7,7 @@ const HeroSection = () => {
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight px-[7px] py-1 my-0">
           Vision Rover: Автономный разведчик для экстремальных сред
         </h1>
-        <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-          Testing, Reviewing, and Trending AI Innovations
-        </p>
+        <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto"></p>
         <Button className="bg-green-500 text-white hover:bg-green-600 hover:shadow-green-500/30 hover:shadow-2xl transition-all duration-300 text-lg px-8 py-4 rounded-full font-semibold">
           Explore Tools
         </Button>
