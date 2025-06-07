@@ -43,18 +43,6 @@ const TeamSection = () => {
       image:
         "https://cdn.poehali.dev/files/34e9adea-c0db-484a-b3c6-c249d47b73b5.jpg",
     },
-    {
-      name: "Елена Кузнецова",
-      role: "Data Scientist",
-      image:
-        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face",
-    },
-    {
-      name: "Сергей Волков",
-      role: "Robotics Engineer",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-    },
   ];
 
   const visibleCards = 3;
