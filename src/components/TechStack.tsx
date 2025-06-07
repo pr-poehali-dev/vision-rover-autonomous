@@ -59,34 +59,24 @@ const TechStack = () => {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="group relative bg-gradient-to-r from-slate-900/95 via-slate-800/90 to-slate-900/95 rounded-2xl p-8 shadow-2xl hover:shadow-cosmic-blue/20 border border-slate-700/50 hover:border-cosmic-blue/40 transition-all duration-500 hover:-translate-y-2 overflow-hidden backdrop-blur-sm"
+              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl border border-gray-100 hover:border-[#78CBB4]/40 transition-all duration-300 hover:-translate-y-1"
             >
-              {/* Animated background glow */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cosmic-blue/5 via-purple-500/5 to-cosmic-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              <div className="relative flex items-start justify-between">
+              <div className="flex items-start justify-between">
                 <div className="flex-1 pr-8">
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cosmic-blue transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-[#012F2C] mb-4 group-hover:text-[#78CBB4] transition-colors duration-300">
                     {tech.name}
                   </h3>
-                  <p className="text-slate-300 leading-relaxed text-base group-hover:text-slate-200 transition-colors duration-300">
+                  <p className="text-gray-600 leading-relaxed text-base">
                     {tech.description}
                   </p>
                 </div>
 
                 <div
-                  className={`w-16 h-16 ${tech.color} rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 flex-shrink-0 border border-white/10`}
+                  className={`w-16 h-16 ${tech.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 flex-shrink-0`}
                 >
-                  <Icon
-                    name={tech.icon}
-                    size={28}
-                    className="text-white drop-shadow-lg"
-                  />
+                  <Icon name={tech.icon} size={28} className="text-white" />
                 </div>
               </div>
-
-              {/* Subtle shine effect */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cosmic-blue/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           ))}
         </div>
