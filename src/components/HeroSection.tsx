@@ -20,7 +20,10 @@ const HeroSection = () => {
             Для экстремальных сред. Преодолевает непроходимые территории без
             участия человека
           </p>
-          <Button className="bg-white/20 text-white border border-white hover:bg-white/30 hover:shadow-white/20 hover:shadow-2xl transition-all duration-300 text-lg px-8 py-4 rounded-xl font-semibold">
+          <Button
+            className="text-white border border-white hover:bg-white/30 hover:shadow-white/20 hover:shadow-2xl transition-all duration-300 text-lg px-8 py-4 rounded-xl font-semibold"
+            style={{ backgroundColor: "#195f5a4d" }}
+          >
             Посмотреть
           </Button>
         </div>
