@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 const FinalCTA = () => {
   return (
     <section className="py-20 px-4 bg-cosmic-blue">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto w-full">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-left">
           Протестируйте возможности робота
         </h2>

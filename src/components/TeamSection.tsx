@@ -75,8 +75,8 @@ const TeamSection = () => {
 
   return (
     <section className="py-20 px-4 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-cosmic-blue mb-8 text-left px-4">
+      <div className="max-w-6xl mx-auto w-full">
+        <h2 className="text-3xl md:text-4xl font-bold text-cosmic-blue mb-8 text-left">
           Разработчики
         </h2>
 
@@ -87,7 +87,7 @@ const TeamSection = () => {
         </div>
 
         <div className="relative">
-          <div className="flex gap-6 overflow-x-auto pb-6 px-4 scrollbar-hide">
+          <div className="flex gap-6 overflow-x-auto pb-6 scrollbar-hide">
             <style jsx>{`
               .scrollbar-hide {
                 -ms-overflow-style: none;
