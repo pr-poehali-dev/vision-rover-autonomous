@@ -43,8 +43,10 @@ const TechStack = () => {
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold mb-2">{tech.title}</h3>
-                  <p className="text-white/90">{tech.description}</p>
+                  <h3 className="font-bold mb-2 text-2xl">{tech.name}</h3>
+                  <p className="text-white/90 leading-relaxed text-base">
+                    {tech.description}
+                  </p>
                 </div>
               </div>
             </div>
