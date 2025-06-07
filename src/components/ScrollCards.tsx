@@ -134,11 +134,6 @@ const ScrollCards = () => {
           {/* Navigation hint */}
           <div className="text-center mt-8">
             <p className="text-gray-500 text-sm"></p>
-            <Icon
-              name={scrollDirection === "down" ? "ChevronDown" : "ChevronUp"}
-              size={20}
-              className="text-gray-400 mx-auto mt-2 animate-bounce"
-            />
           </div>
         </div>
       </div>
