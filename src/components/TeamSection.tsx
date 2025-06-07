@@ -86,21 +86,14 @@ const TeamSection = () => {
           </p>
         </div>
 
-        <div className="relative -mx-4">
-          <div
-            className="flex gap-4 pb-6 px-4"
-            style={{
-              width: `${team.length * 336}px`, // 320px card + 16px gap
-              overflowX: "auto",
-              overflowY: "hidden",
-              scrollBehavior: "smooth",
-              WebkitOverflowScrolling: "touch",
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
-            }}
-          >
+        <div className="relative">
+          <div className="flex gap-6 overflow-x-auto pb-6 px-4 scrollbar-hide">
             <style jsx>{`
-              div::-webkit-scrollbar {
+              .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+              }
+              .scrollbar-hide::-webkit-scrollbar {
                 display: none;
               }
             `}</style>
