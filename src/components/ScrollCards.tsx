@@ -117,7 +117,7 @@ const ScrollCards = () => {
                         }
                       : index === 1
                         ? {
-                            backgroundImage: `url('https://cdn.poehali.dev/files/f8b14b4d-c2a6-499b-9164-5af09ea687ad.png')`,
+                            backgroundImage: `url('https://cdn.poehali.dev/files/b97111bd-6c9a-4caf-886f-7d65a758c58a.png')`,
                             backgroundSize: "cover",
                             backgroundPosition: "center",
                             backgroundRepeat: "no-repeat",
