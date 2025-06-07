@@ -24,7 +24,7 @@ const HeroSection = () => {
             </p>
           </div>
           <Button
-            className="text-white border border-white hover:bg-white/30 hover:shadow-white/20 hover:shadow-2xl transition-all duration-300 text-lg px-8 py-4 rounded-xl font-semibold self-start"
+            className="text-white border border-white hover:bg-white/30 hover:shadow-white/20 hover:shadow-2xl transition-all duration-300 text-lg px-8 py-4 rounded-lg font-semibold self-start"
             style={{ backgroundColor: "#195f5a4d" }}
           >
             Посмотреть
