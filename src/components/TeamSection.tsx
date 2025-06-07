@@ -100,9 +100,7 @@ const TeamSection = () => {
         </h2>
         {/* Заголовок */}
         <div className="text-center mb-16">
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Талантливые специалисты, создающие будущее космических технологий
-          </p>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto"></p>
         </div>
 
         {/* Карусель команды */}
