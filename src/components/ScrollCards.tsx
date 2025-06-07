@@ -12,7 +12,7 @@ const ScrollCards = () => {
       subtitle: "Анализ местности",
       description:
         "Продвинутые алгоритмы сканирования анализируют окружающую среду в реальном времени, обеспечивая точную навигацию в любых условиях",
-      gradient: "from-purple-600 via-orange-500 to-yellow-400",
+      color: "bg-purple-600",
     },
     {
       icon: "Map",
@@ -20,7 +20,7 @@ const ScrollCards = () => {
       subtitle: "Построение маршрута",
       description:
         "Автономная система навигации создает оптимальные маршруты, адаптируясь к изменяющимся условиям и препятствиям на пути",
-      gradient: "from-blue-600 via-purple-500 to-pink-400",
+      color: "bg-blue-600",
     },
     {
       icon: "Sensor",
@@ -28,7 +28,7 @@ const ScrollCards = () => {
       subtitle: "Сбор данных",
       description:
         "Комплексная система датчиков собирает критически важную информацию об окружающей среде для дальнейшего анализа",
-      gradient: "from-green-600 via-blue-500 to-purple-400",
+      color: "bg-green-600",
     },
   ];
 
@@ -104,7 +104,7 @@ const ScrollCards = () => {
                 }}
               >
                 <div
-                  className={`bg-gradient-to-br ${card.gradient} rounded-3xl p-8 md:p-12 text-white shadow-2xl h-full flex flex-col justify-center relative overflow-hidden`}
+                  className={`${card.color} rounded-3xl p-8 md:p-12 text-white shadow-2xl h-full flex flex-col justify-center items-center text-center relative overflow-hidden`}
                 >
                   {/* Top badge */}
                   <div className="absolute top-6 right-6">
@@ -114,37 +114,13 @@ const ScrollCards = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="flex items-center space-x-8">
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-4 mb-6">
-                        <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                          <Icon
-                            name={card.icon as any}
-                            size={32}
-                            className="text-white"
-                          />
-                        </div>
-                        <div>
-                          <h3 className="text-3xl md:text-4xl font-bold mb-2">
-                            {card.title}
-                          </h3>
-                          <p className="text-lg opacity-90 leading-relaxed max-w-md">
-                            {card.description}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Visual element */}
-                    <div className="hidden md:block flex-shrink-0">
-                      <div className="w-32 h-48 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                        <Icon
-                          name={card.icon as any}
-                          size={64}
-                          className="text-white/50"
-                        />
-                      </div>
-                    </div>
+                  <div className="max-w-md">
+                    <h3 className="text-3xl md:text-4xl font-bold mb-6">
+                      {card.title}
+                    </h3>
+                    <p className="text-lg opacity-90 leading-relaxed">
+                      {card.description}
+                    </p>
                   </div>
 
                   {/* Background decoration */}
