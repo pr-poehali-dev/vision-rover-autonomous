@@ -28,11 +28,11 @@ const TechStack = () => {
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-6xl mx-auto w-full">
-        <div className="text-center mb-16">
+        <div className="text-left mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#012F2C]">
             Технологический стек ровера
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-lg max-w-2xl">
             Передовые решения для исследования космических миссий
           </p>
         </div>
