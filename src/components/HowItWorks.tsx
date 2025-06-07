@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const HowItWorks = () => {
+  const [activeStep, setActiveStep] = useState(0);
   const steps = [
     {
       icon: "Radar",
@@ -26,19 +28,13 @@ const HowItWorks = () => {
           Принцип работы
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="text-center group hover:transform hover:scale-105 transition-all duration-300"
+              className="text-center group hover:transform hover:scale-105 transition-all duration-300 cursor-pointer"
+              onClick={() => setActiveStep(index)}
             >
-              <div className="w-20 h-20 mx-auto mb-6 bg-cosmic-blue rounded-full flex items-center justify-center group-hover:bg-aqua transition-colors duration-300">
-                <Icon
-                  name={step.icon as any}
-                  size={40}
-                  className="text-white group-hover:text-cosmic-blue transition-colors duration-300"
-                />
-              </div>
               <h3 className="text-xl font-semibold text-cosmic-blue mb-3">
                 {step.title}
               </h3>
@@ -46,6 +42,19 @@ const HowItWorks = () => {
                 {step.description}
               </p>
             </div>
+          ))}
+        </div>
+
+        {/* Progress indicators */}
+        <div className="flex justify-center space-x-2">
+          {steps.map((_, index) => (
+            <div
+              key={index}
+              className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
+                index === activeStep ? "bg-cosmic-blue" : "bg-gray-300"
+              }`}
+              onClick={() => setActiveStep(index)}
+            />
           ))}
         </div>
       </div>
