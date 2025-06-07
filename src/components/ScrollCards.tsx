@@ -106,33 +106,18 @@ const ScrollCards = () => {
                 }}
               >
                 <div
-                  className={`${index === 0 || index === 1 || index === 2 ? "relative" : card.color} rounded-3xl p-8 md:p-12 text-white shadow-2xl h-full flex flex-col justify-center relative overflow-hidden`}
+                  className="rounded-3xl p-8 md:p-12 text-white shadow-2xl h-full flex flex-col justify-center relative overflow-hidden"
                   style={
                     index === 0
-                      ? {
-                          backgroundImage: `url('https://cdn.poehali.dev/files/a3bdb80f-ee3e-482c-bd23-a8b52c0cf6b7.png')`,
-                          backgroundSize: "cover",
-                          backgroundPosition: "center",
-                          backgroundRepeat: "no-repeat",
-                        }
+                      ? { backgroundColor: "#F7633D" }
                       : index === 1
-                        ? {
-                            backgroundImage: `url('https://cdn.poehali.dev/files/7be38cf9-a5fd-4221-a2c1-027663783574.png')`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
-                            backgroundRepeat: "no-repeat",
-                          }
+                        ? { backgroundColor: "#3843D0" }
                         : index === 2
-                          ? {
-                              backgroundImage: `url('https://cdn.poehali.dev/files/06699ecd-b695-451a-a370-96b9e17ed226.png')`,
-                              backgroundSize: "cover",
-                              backgroundPosition: "center",
-                              backgroundRepeat: "no-repeat",
-                            }
+                          ? { backgroundColor: "#FF80A9" }
                           : {}
                   }
                 >
-                  {/* Overlay for text readability on all cards */}
+                  {/* Overlay removed since we're using solid colors */}
                   {(index === 0 || index === 1 || index === 2) && (
                     <div className="absolute inset-0 bg-black/20 rounded-3xl" />
                   )}
