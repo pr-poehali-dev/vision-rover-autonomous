@@ -16,6 +16,12 @@ const TechStack = () => {
       icon: "Radar",
       color: "bg-[#F7633D]",
     },
+    {
+      name: "Vision-rover",
+      description: "Открытый исходный код",
+      icon: "Github",
+      color: "bg-[#FF80A9]",
+    },
   ];
 
   return (
