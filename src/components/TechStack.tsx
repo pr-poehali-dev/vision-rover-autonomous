@@ -2,43 +2,97 @@ import Icon from "@/components/ui/icon";
 
 const TechStack = () => {
   const technologies = [
-    "ИИ-навигация",
-    "Сенсорный массив",
-    "Защищенный корпус",
+    {
+      name: "ИИ-навигация",
+      description:
+        "Интеллектуальная система автономного управления и планирования маршрутов",
+      icon: "Brain",
+      color: "bg-gradient-to-br from-purple-500 to-indigo-600",
+    },
+    {
+      name: "Сенсорный массив",
+      description:
+        "Комплекс высокоточных датчиков для анализа окружающей среды",
+      icon: "Radar",
+      color: "bg-gradient-to-br from-blue-500 to-cyan-600",
+    },
+    {
+      name: "Защищенный корпус",
+      description:
+        "Усиленная конструкция, устойчивая к экстремальным условиям космоса",
+      icon: "Shield",
+      color: "bg-gradient-to-br from-emerald-500 to-teal-600",
+    },
   ];
 
   return (
-    <section className="py-20 px-4 bg-gray-50">
+    <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-6xl mx-auto w-full">
-        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-left text-[#012F2C]">
-          Наш стек
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#012F2C]">
+            Технологический стек ровера
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Передовые решения для исследования космических миссий
+          </p>
+        </div>
 
-        {/* GitHub Stars Widget */}
-        <div className="mb-12">
-          <div className="inline-flex items-center bg-white rounded-lg px-6 py-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <Icon name="Github" size={24} className="text-cosmic-blue mr-3" />
-            <span className="text-cosmic-blue font-semibold mr-2">
-              vision-rover
-            </span>
-            <Icon name="Star" size={16} className="text-yellow-500 mr-1" />
-            <span className="text-gray-600 font-medium">2.4k</span>
+        {/* GitHub Repository Widget */}
+        <div className="mb-16 text-center">
+          <div className="inline-flex items-center bg-white rounded-xl px-8 py-5 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+            <Icon name="Github" size={28} className="text-cosmic-blue mr-4" />
+            <div className="text-left">
+              <div className="text-cosmic-blue font-bold text-lg">
+                vision-rover
+              </div>
+              <div className="text-gray-500 text-sm">Открытый исходный код</div>
+            </div>
+            <div className="ml-6 flex items-center">
+              <Icon name="Star" size={18} className="text-yellow-500 mr-2" />
+              <span className="text-gray-700 font-semibold text-lg">2.4k</span>
+            </div>
           </div>
         </div>
 
-        {/* Technologies List */}
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* Technologies Grid */}
+        <div className="grid md:grid-cols-3 gap-8">
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg hover:border-aqua/30 border-2 border-transparent transition-all duration-300"
+              className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl border border-gray-100 hover:border-cosmic-blue/20 transition-all duration-500 hover:-translate-y-2"
             >
-              <div className="w-12 h-12 mx-auto mb-4 bg-cosmic-blue rounded-lg flex items-center justify-center">
-                <Icon name="Cpu" size={24} className="text-white" />
+              <div
+                className={`w-16 h-16 mx-auto mb-6 ${tech.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
+              >
+                <Icon name={tech.icon} size={28} className="text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-cosmic-blue">{tech}</h3>
+
+              <h3 className="text-xl font-bold text-cosmic-blue mb-3 text-center">
+                {tech.name}
+              </h3>
+
+              <p className="text-gray-600 text-center leading-relaxed">
+                {tech.description}
+              </p>
+
+              <div className="mt-6 pt-4 border-t border-gray-100">
+                <div className="flex items-center justify-center text-cosmic-blue/70 group-hover:text-cosmic-blue transition-colors">
+                  <Icon name="ArrowRight" size={16} className="mr-2" />
+                  <span className="text-sm font-medium">Подробнее</span>
+                </div>
+              </div>
             </div>
           ))}
+        </div>
+
+        {/* Additional Info */}
+        <div className="mt-16 text-center">
+          <div className="inline-flex items-center px-6 py-3 bg-cosmic-blue/5 rounded-full">
+            <Icon name="Zap" size={20} className="text-cosmic-blue mr-2" />
+            <span className="text-cosmic-blue font-medium">
+              Готов к развертыванию в космических условиях
+            </span>
+          </div>
         </div>
       </div>
     </section>
