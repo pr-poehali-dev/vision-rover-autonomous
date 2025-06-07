@@ -16,7 +16,7 @@ const HeroSection = () => {
           >
             Vision Rover: Автономный разведчик
           </h1>
-          <p className="text-gray-300 mb-6 leading-relaxed text-lg">
+          <p className="mb-6 leading-relaxed text-lg text-[#195f5a]">
             Для экстремальных сред. Преодолевает непроходимые территории без
             участия человека
           </p>
