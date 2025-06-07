@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ScrollCards from "@/components/ScrollCards";
 import TechStack from "@/components/TechStack";
@@ -7,6 +8,7 @@ import FinalCTA from "@/components/FinalCTA";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Header />
       <HeroSection />
       <ScrollCards />
       <TechStack />
