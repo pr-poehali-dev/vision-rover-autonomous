@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon";
 
 const ScrollCards = () => {
   const [currentCard, setCurrentCard] = useState(0);
-  const [scrollDirection, setScrollDirection] = useState<"up" | "down">("down");
+  const [isScrollLocked, setIsScrollLocked] = useState(false);
 
   const cards = [
     {
@@ -36,19 +36,32 @@ const ScrollCards = () => {
     let lastScrollY = window.scrollY;
     let ticking = false;
 
-    const handleScroll = () => {
+    const handleScroll = (e: Event) => {
+      // Предотвращаем скролл если он заблокирован
+      if (isScrollLocked) {
+        e.preventDefault();
+        return;
+      }
+
       if (!ticking) {
         requestAnimationFrame(() => {
           const currentScrollY = window.scrollY;
           const direction = currentScrollY > lastScrollY ? "down" : "up";
 
           if (Math.abs(currentScrollY - lastScrollY) > 30) {
-            setScrollDirection(direction);
-
+            // Блокируем скролл вниз если не достигли последней карточки
             if (direction === "down" && currentCard < cards.length - 1) {
+              setIsScrollLocked(true);
               setCurrentCard((prev) => prev + 1);
-            } else if (direction === "up" && currentCard > 0) {
+              // Разблокируем через время анимации
+              setTimeout(() => setIsScrollLocked(false), 1000);
+            }
+            // Блокируем скролл вверх если не достигли первой карточки
+            else if (direction === "up" && currentCard > 0) {
+              setIsScrollLocked(true);
               setCurrentCard((prev) => prev - 1);
+              // Разблокируем через время анимации
+              setTimeout(() => setIsScrollLocked(false), 1000);
             }
 
             lastScrollY = currentScrollY;
@@ -60,9 +73,17 @@ const ScrollCards = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [currentCard, cards.length]);
+    // Добавляем обработчик с возможностью preventDefault
+    window.addEventListener("scroll", handleScroll, { passive: false });
+    window.addEventListener("wheel", handleScroll, { passive: false });
+    window.addEventListener("touchmove", handleScroll, { passive: false });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("touchmove", handleScroll);
+    };
+  }, [currentCard, cards.length, isScrollLocked]);
 
   return (
     <section className="py-20 px-4 bg-gray-50 min-h-screen flex items-center">
