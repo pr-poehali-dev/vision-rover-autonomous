@@ -12,7 +12,7 @@ const HeroSection = () => {
         <div className="text-left px-0 my-0 py-0 lg:pr-4">
           <h1
             className="sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 px-0 max-w-none text-7xl"
-            style={{ color: "#012F2C" }}
+            style={{ color: "#012F2C", fontSize: "calc(4.5rem + 15px)" }}
           >
             Vision Rover:
             <br />
