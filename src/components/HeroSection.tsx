@@ -14,7 +14,8 @@ const HeroSection = () => {
             className="sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 text-6xl"
             style={{ color: "#012F2C" }}
           >
-            Vision Rover: Автономный разведчик
+            <div>Vision Rover:</div>
+            <div>Автономный разведчик</div>
           </h1>
           <p className="mb-6 leading-relaxed text-lg text-[#195f5a]">
             Для экстремальных сред. Преодолевает непроходимые территории без
