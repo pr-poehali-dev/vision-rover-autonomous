@@ -16,8 +16,9 @@ const HeroSection = () => {
           <h1 className="sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-6 text-6xl">
             Vision Rover: Автономный разведчик
           </h1>
-          <p className="text-base text-gray-300 mb-6 leading-relaxed">
-            Передовые технологии исследования и анализа для будущего
+          <p className="text-gray-300 mb-6 leading-relaxed text-lg">
+            Для экстремальных сред. Преодолевает непроходимые территории без
+            участия человека
           </p>
           <Button className="bg-green-500 text-white hover:bg-green-600 hover:shadow-green-500/30 hover:shadow-2xl transition-all duration-300 text-lg px-8 py-4 rounded-full font-semibold">
             Explore Tools
