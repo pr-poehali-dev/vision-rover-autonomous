@@ -51,7 +51,7 @@ const HowItWorks = () => {
             <div
               key={index}
               className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
-                index === activeStep ? "bg-[#012F2C]" : "bg-gray-300"
+                index === activeStep ? "bg-[#012F2C] !important" : "bg-gray-300"
               }`}
               onClick={() => setActiveStep(index)}
             />
