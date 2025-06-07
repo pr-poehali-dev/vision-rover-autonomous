@@ -17,10 +17,9 @@ const TechStack = () => {
       color: "bg-[#F7633D]",
     },
     {
-      name: "Защищенный корпус",
-      description:
-        "Усиленная конструкция, устойчивая к экстремальным условиям космоса",
-      icon: "Shield",
+      name: "Vision-rover",
+      description: "Открытый исходный код",
+      icon: "Github",
       color: "bg-[#FF80A9]",
     },
   ];
