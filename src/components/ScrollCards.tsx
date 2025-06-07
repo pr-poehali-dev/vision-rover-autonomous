@@ -92,7 +92,7 @@ const ScrollCards = () => {
                 }}
               >
                 <div
-                  className={`${card.color} rounded-3xl p-8 md:p-12 text-white shadow-2xl h-full flex flex-col justify-center items-center text-center relative overflow-hidden`}
+                  className={`${card.color} rounded-3xl p-8 md:p-12 text-white shadow-2xl h-full flex flex-col justify-center relative overflow-hidden`}
                 >
                   {/* Top badge */}
                   <div className="absolute top-6 right-6">
@@ -102,7 +102,7 @@ const ScrollCards = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="max-w-md">
+                  <div className="max-w-md pl-8 text-left">
                     <h3 className="text-3xl md:text-4xl font-bold mb-6">
                       {card.title}
                     </h3>
