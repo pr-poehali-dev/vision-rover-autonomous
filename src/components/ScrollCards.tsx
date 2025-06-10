@@ -109,11 +109,11 @@ const ScrollCards = () => {
                   className="rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 text-white shadow-2xl h-full flex flex-col justify-center relative overflow-hidden"
                   style={
                     index === 0
-                      ? { backgroundColor: "#F7633D" }
+                      ? { backgroundColor: "#EE686A" }
                       : index === 1
-                        ? { backgroundColor: "#3843D0" }
+                        ? { backgroundColor: "#7B68EE" }
                         : index === 2
-                          ? { backgroundColor: "#FF80A9" }
+                          ? { backgroundColor: "#000000" }
                           : {}
                   }
                 >
@@ -154,7 +154,7 @@ const ScrollCards = () => {
                 key={index}
                 onClick={() => setCurrentCard(index)}
                 className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-500 hover:scale-125 ${
-                  index === currentCard ? "bg-orange-500" : "bg-gray-300"
+                  index === currentCard ? "bg-red-500" : "bg-gray-300"
                 }`}
               />
             ))}

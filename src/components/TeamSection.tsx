@@ -56,7 +56,7 @@ const TeamSection = () => {
     },
   ];
 
-  const cardColors = ["#F7633D", "#78CBB4", "#FF80A9", "#F7633D", "#3843D0"];
+  const cardColors = ["#EE686A", "#7B68EE", "#000000", "#EE686A", "#7B68EE"];
 
   const visibleCards =
     window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1;
