@@ -15,10 +15,10 @@ export function SplineHeroSection() {
       <div className="flex h-full">
         {/* Left content */}
         <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
-          <h1 className="text-[32rem] md:text-[20rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 leading-none">
+          <h1 className="text-[16rem] md:text-[10rem] font-bold text-white leading-none">
             Vision Rover
           </h1>
-          <p className="mt-4 text-neutral-300 max-w-lg text-2xl">
+          <p className="mt-4 text-white max-w-lg text-2xl">
             Интерактивная 3D модель автономного разведчика. Преодолевает
             непроходимые территории без участия человека.
           </p>
