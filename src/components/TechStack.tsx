@@ -7,14 +7,14 @@ const TechStack = () => {
       description:
         "Интеллектуальная система автономного управления и планирования маршрутов",
       icon: "Brain",
-      color: "bg-[#7B68EE]",
+      color: "bg-[#3E0074]",
     },
     {
       name: "Сенсорный массив",
       description:
         "Комплекс высокоточных датчиков для анализа окружающей среды",
       icon: "Radar",
-      color: "bg-[#EE686A]",
+      color: "bg-[#00787C]",
     },
     {
       name: "Vision-rover",

@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 
 const FinalCTA = () => {
   return (
-    <section className="py-[34px] sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#EE686A]">
+    <section className="py-[34px] sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#3E0074]">
       <div className="max-w-6xl mx-auto w-full">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-center sm:text-left text-black">
           Протестируйте возможности робота

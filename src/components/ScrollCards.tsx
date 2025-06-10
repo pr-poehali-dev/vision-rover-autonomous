@@ -109,9 +109,9 @@ const ScrollCards = () => {
                   className="rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 text-white shadow-2xl h-full flex flex-col justify-center relative overflow-hidden"
                   style={
                     index === 0
-                      ? { backgroundColor: "#EE686A" }
+                      ? { backgroundColor: "#3E0074" }
                       : index === 1
-                        ? { backgroundColor: "#7B68EE" }
+                        ? { backgroundColor: "#00787C" }
                         : index === 2
                           ? { backgroundColor: "#000000" }
                           : {}
