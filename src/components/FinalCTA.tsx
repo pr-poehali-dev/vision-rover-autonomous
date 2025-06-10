@@ -3,9 +3,9 @@ import { Input } from "@/components/ui/input";
 
 const FinalCTA = () => {
   return (
-    <section className="py-[34px] sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#3E0074]">
+    <section className="py-[34px] sm:py-16 lg:py-20 px-4 sm:px-6 bg-[#000000]">
       <div className="max-w-6xl mx-auto w-full">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-center sm:text-left text-black">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-center sm:text-left text-[#ffffff]">
           Протестируйте возможности робота
         </h2>
         <p className="mb-6 sm:mb-8 leading-relaxed text-white/80 font-light text-base sm:text-lg text-center sm:text-left">
