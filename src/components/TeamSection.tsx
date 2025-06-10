@@ -18,7 +18,7 @@ const TeamSection = () => {
       name: "Алексей Петров",
       role: "Технический директор",
       image:
-        "https://cdn.poehali.dev/files/d0f70dd4-8f72-4ca6-bf7d-a7b386990989.jpg",
+        "https://cdn.poehali.dev/files/3815ecaa-46be-415c-bb61-baabe9287388.jpg",
       quote:
         "Автономный разведчик — это не просто дрон, это искусственный интеллект, способный принимать решения в экстремальных условиях космоса.",
     },
@@ -26,7 +26,7 @@ const TeamSection = () => {
       name: "Мария Смирнова",
       role: "Инженер ИИ",
       image:
-        "https://cdn.poehali.dev/files/30c54906-f552-41f5-a8f8-ab31c30c0683.jpg",
+        "https://cdn.poehali.dev/files/18c99fd3-f30d-4aad-b757-fdf7380b4d6e.jpg",
       quote:
         "Нейросети разведчика обучены на миллионах космических сценариев. Он может адаптироваться к любой неизвестной ситуации.",
     },
@@ -34,7 +34,7 @@ const TeamSection = () => {
       name: "Дмитрий Козлов",
       role: "Инженер аппаратуры",
       image:
-        "https://cdn.poehali.dev/files/2cda610a-ae2e-4a21-9567-3976b38456b5.jpg",
+        "https://cdn.poehali.dev/files/c6c2015a-29d0-45d4-acfc-061e2f7c7375.jpg",
       quote:
         "Каждая деталь разведчика проектировалась для работы в вакууме. Он выдержит температуры от -270°C до +120°C.",
     },
@@ -42,7 +42,7 @@ const TeamSection = () => {
       name: "Анна Васильева",
       role: "Менеджер продукта",
       image:
-        "https://cdn.poehali.dev/files/b78145f3-138a-471c-83b2-ce7cf0573471.jpg",
+        "https://cdn.poehali.dev/files/59b51f11-96fe-443f-b059-770c16b6e1a2.jpg",
       quote:
         "Автономный разведчик откроет новую эру исследований. Он сможет работать годами без связи с Землей.",
     },
@@ -50,7 +50,7 @@ const TeamSection = () => {
       name: "Игорь Новиков",
       role: "Системный архитектор",
       image:
-        "https://cdn.poehali.dev/files/34e9adea-c0db-484a-b3c6-c249d47b73b5.jpg",
+        "https://cdn.poehali.dev/files/ed3fb634-2580-4f0b-8d95-1dc9a5eb124a.jpg",
       quote:
         "Архитектура разведчика позволяет ему самостоятельно ремонтировать себя и адаптировать алгоритмы в реальном времени.",
     },
