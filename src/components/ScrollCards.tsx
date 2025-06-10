@@ -117,28 +117,22 @@ const ScrollCards = () => {
                           : {}
                   }
                 >
-                  {/* Overlay removed since we're using solid colors */}
-                  {(index === 0 || index === 1 || index === 2) && (
-                    <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-[#000000]" />
-                  )}
+                  {/* Content with proper z-index */}
+                  <div className="relative z-20">
+                    {/* Top badge */}
+                    <div className="absolute -top-2 sm:-top-4 right-0">
+                      <span className="bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
+                        {card.subtitle}
+                      </span>
+                    </div>
 
-                  {/* Top badge */}
-                  <div className="absolute top-4 sm:top-6 right-4 sm:right-6 z-10">
-                    <span className="bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
-                      {card.subtitle}
-                    </span>
-                  </div>
-
-                  {/* Content */}
-                  <div className="max-w-md pl-4 sm:pl-8 text-center sm:text-left">
-                    <h3
-                      className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 ${
-                        index === 1 ? "text-white" : ""
-                      }`}
-                    >
+                    {/* Title */}
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 leading-tight text-white">
                       {card.title}
                     </h3>
-                    <p className="text-base sm:text-lg opacity-90 leading-relaxed">
+
+                    {/* Description */}
+                    <p className="text-base sm:text-lg md:text-xl opacity-90 leading-relaxed text-white/90">
                       {card.description}
                     </p>
                   </div>
