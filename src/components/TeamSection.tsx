@@ -96,7 +96,7 @@ const TeamSection = () => {
   return (
     <section className="px-4 sm:px-6 bg-gray-50 py-12 sm:py-16 lg:py-[114px]">
       <div className="max-w-6xl mx-auto w-full">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-16 text-center sm:text-left text-[#012F2C]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-16 text-center sm:text-left text-black">
           Разработчики
         </h2>
 
